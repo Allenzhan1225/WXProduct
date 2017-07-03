@@ -74,6 +74,59 @@
 
 </view>
 
+<!--<block wx:for="{{list2}}" class="list-cell2">
+  <view>
+    <view class="" style="background:white;height:80px;width:30%;">
+        <image src="{{item.img}}" style="height:35px;width:45px;" mode="scaleToFill"></image>
+    </view>
+     
+  </view>
+</block>-->
+<view class="" style="height:160px;width:100%;display:flex;flex-direction:row; margin-top:10px;">
+
+<!--第一排-->
+    <view class="" style="display:flex;flex:1;display:flex;background:white;flex-direction:column;justify-content:center;align-items:flex-center;margin:8px;">
+        <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin:8px;">
+           <image src="../../images/home/index_8.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
+        </view>
+         <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin-top:8px;">
+           <image src="../../images/home/index_9.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
+         </view>
+        <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin-top:8px; ">
+           <image src="../../images/home/index_10.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
+        </view>
+    </view>
+
+<!--第二排-->
+
+    <view class="" style="display:flex;flex:1;display:flex;background:red;flex-direction:column;justify-content:center;align-items:flex-center;margin:8px;">
+        <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin:8px;">
+           <image src="../../images/home/index_12.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
+        </view>
+         <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin-top:8px;">
+           <image src="../../images/home/index_12.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
+         </view>
+         <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin-top:8px;">
+           <image src="../../images/home/index_13.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
+         </view>
+    </view>
+<!--第三排-->
+
+    <view class="" style="display:flex;flex:1;background:white;display:flex;flex-direction:column;justify-content:center;align-items:flex-center;margin:8px;">
+         <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin:8px;">
+           <image src="../../images/home/index_14.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
+         </view>
+          <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin-top:8px;">
+             <image src="../../images/home/index_15.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
+          </view>
+         <view class="" style="display:flex;flex:1; justify-content:center;align-items:flex-center;margin-top:8px;">
+           <image src="../../images/home/index_16.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
+         </view>
+    </view>
+</view>
+
+
+
 
 
 </view>

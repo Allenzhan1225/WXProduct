@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    
+  </view>
+  <view class="dhajb" style="flex-direction:column;">
+    <view bindtap="btnclick" class="flex-item1">
+      <text class="userinfo-title">欢迎来到Allen写的微信小程序</text>
+    </view>
+
+    <view  class="content">
+      <text bindtap="textBtnClick" class="content-list" >text 的使用</text>
+      <text bindtap="iconBtnClick" class="content-list"> icon 的使用 </text>
+
+    </view>
+ 
+  
+
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

@@ -1,0 +1,83 @@
+/**index.wxss**/
+.container{
+  display: flex;
+  padding: 0px;
+  width: 100%;
+  background: rgb(210, 236, 253);
+  align-items: flex-start;
+}
+
+
+.header {
+  height: 64px;
+  width: 100%;
+  background: rgb(46, 138, 227);
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+}
+
+.header-img {
+  margin-top: 15px;
+  margin-left: 40px;
+  height: 64px;
+  width: 80%;
+
+}
+
+.nav{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  padding: 8px;
+  height: 44px;
+  width: 100%;
+  background: rgb(9, 74, 144);
+
+}
+.nav-item{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 30px;
+  width: 150px;
+ 
+}
+
+.view{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  width: 100%;
+
+}
+
+.swiper{
+  height: 150px;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+
+}
+
+.list-cell{
+  display: flex;
+  flex-direction: row;
+  margin: 8px 8px 0px 8px;
+}
+.list-cell image {
+  height: 58px;
+  width: 65px;
+}
+
+
+.list-celltitle{
+  
+  flex-direction: row;
+  background: white;
+  margin-right: 8px;
+
+}

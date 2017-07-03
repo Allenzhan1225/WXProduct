@@ -1,0 +1,31 @@
+
+<scroll-view scroll-y class="container" bindscrolltolower="loadmore" bindscrolltoupper="refresh">
+  <view wx:for="{{feed}}">
+  <view style="display:flex;flex:1;flex-direction: column; background: white;padding:10px;" bindtap="bindItemTap">
+     <!--cell 的头部-->
+    <view class="cellbg">
+       <image  class="img" src="{{item.feed_source_img}}"></image>
+       <view class="text-content">
+          <text class="textitem">{{item.feed_source_name}}</text>
+          <text class="textitem">{{item.feed_source_txt}}</text>
+       </view>
+       <image src="../../images/more.png" class="img"></image>
+    </view>
+    <!--cell 的中间部分-->
+    <view class="cell-center">
+      <text class="question-text">{{item.question}}</text>
+    </view>
+    <view class="cell-center">
+      <text class="textitem1">{{item.answer_ctnt}}</text>
+    </view>
+    <!--下面部分-->
+     <view class="cell-bottom">
+      <text class="textitem">112赞同· 18评论 · 关注问题</text>
+    </view>
+  </view>
+  <view style="height:10px;width:375px;"></view> 
+  </view>
+
+
+ 
+</scroll-view>

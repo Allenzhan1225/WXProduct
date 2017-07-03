@@ -1,0 +1,45 @@
+/* second.wxss */
+.content{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;/*子组件水平对齐方式*/
+  justify-content: center;/*子组件垂直对齐方式*/
+}
+.content-list{
+  margin-top: 50rpx;
+  background-color: red;
+
+}
+.content-list1{
+  margin-top: 50rpx;
+  background-color: blue;
+  color: yellow;
+
+}
+.content-list2{
+  height: 50rpx;/*高*/
+  width: 200rpx;/*宽*/
+  text-align: center;/*字体水平对齐方式*/
+  font-size: 16pt;/*字体大小*/
+  margin-top: 50rpx;
+  border-color: yellow;
+  color: white;
+  background-color: black;
+  border-width: 5px;
+  border-bottom-color: red;
+  padding: 100;
+  border-radius: 25px;/*这个是设置圆角的*/
+
+}
+.content-list3{
+  margin-top: 50rpx;
+  background-color: red;
+
+}
+.content-list4{
+  margin-top: 50rpx;
+  background-color: red;
+
+}

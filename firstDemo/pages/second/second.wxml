@@ -1,0 +1,12 @@
+<!--second.wxml-->
+<view>
+   <view class="content">
+    <text class="content-list">一路上有你</text>
+    <text class="content-list1" >痛一点也愿意</text>
+    <text class="content-list2">你好</text>
+    <text class="content-list3">我很好</text>
+    <text class="content-list4">我也很好你知道吗？</text>
+   </view>
+</view>
+
+

@@ -52,14 +52,28 @@
 <!--<template is="list" data="{{...item}}"/>-->
 <block wx:for="{{list}}">
   <view class="list-cell">
-      <image src="{{item.img}}"></image>
+       <image src="{{item.img}}"></image>
        <view class="list-celltitle">
-          <view class="" ><text style="color:{{item.color}}">{{item.title}}</text></view>
-          <view class=""><text>{{item.detial}}</text></view>
+          <view class="item_title" ><text style="color:{{item.color}}">{{item.title}}</text></view>
+          <view class="item_title" style="font-size:12pt;"><text>{{item.detial}}</text></view>
        </view>
+       <view class="" style="background:{{item.color}};height:58px;width:4px;margin:0px;"></view>
   </view>
- 
 </block>
+
+<view class="list-cell" style="height:75px;width:95%">
+  <image src="../../images/home/index_7.jpg" style="height:75px;width:115px;"></image>
+    <view class="news">
+        <view class="" style="margin-top:8px;margin-left:8px;">
+          <text class="texttitle"> 1.省内首家"生物补片早泄治疗技术"在九龙开展</text>
+        </view>
+        <view class="" style="margin-top:8px;margin-left:8px;">
+          <text class="texttitle">2.九龙医院携手滴滴打车送健康</text>
+        </view>
+    </view>
+
+</view>
+
 
 
 </view>

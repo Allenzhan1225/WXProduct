@@ -11,7 +11,7 @@
 .header {
   height: 64px;
   width: 100%;
-  background: rgb(46, 138, 227);
+  background: #399EEC;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -28,7 +28,7 @@
 
 .nav{
   display: flex;
-  flex: 1;
+  /*flex: 1;*/
   flex-direction: row;
   padding: 8px;
   height: 44px;
@@ -47,7 +47,7 @@
 
 .view{
   display: flex;
-  flex: 1;
+  /*flex: 1;*/
   flex-direction: row;
   width: 100%;
 
@@ -65,6 +65,8 @@
 
 .list-cell{
   display: flex;
+  height: 58px;
+  width: 98%; 
   flex-direction: row;
   margin: 8px 8px 0px 8px;
 }
@@ -75,9 +77,28 @@
 
 
 .list-celltitle{
-  
-  flex-direction: row;
+
+  width: 97%;
+  flex-direction: column;
   background: white;
   margin-right: 8px;
+
+}
+.item_title{
+  margin-left: 8px;
+  margin-top: 5px;
+  font-size: 17pt;
+}
+
+.news{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 100%;
+
+}
+
+.texttitle{
+  font-size: 13pt;
 
 }

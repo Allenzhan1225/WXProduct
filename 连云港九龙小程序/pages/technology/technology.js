@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+      list:[
+        {'img':'../../images/home/jishu1.png','title':'','detial':'','num':''},
+        ]
   },
 
   /**

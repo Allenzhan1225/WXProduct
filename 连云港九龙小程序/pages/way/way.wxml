@@ -3,13 +3,14 @@
   <text class="title">来院路线</text>
   <view class="content-view">
       <image src="../../images/home/in_title_1.jpg" class="img" mode="scaleToFill" ></image>
-      <text>医院地址:<text>连云港市解放中路125号</text></text>
-      <text>公交路线:<text>乘坐3路、7路、201路、游2在解放桥下车步行10米即到</text></text>
-      <text>火车站路线</text>
-      <text>1：乘坐游2、12路到解放桥下车步行10米即到</text>
-      <text>2：乘坐119路、11路、9路外环、4路公交车道石油公司下车步行190米即到</text>
-      <text>专家QQ：1205650055</text>
-      <text>专家热线：0518-81591078（点此可拨打）</text>
+      <text class="text">医院地址:</text><text class="sub-text">连云港市解放中路125号</text>
+      <text class="text">公交路线:</text><text class="sub-text">乘坐<text style="color:red;">3路、7路、201路、游2</text>在<text style="color:red;">解放桥</text>下车步行10米即到</text>
+      <text class="text">火车站路线</text>
+      <text class="sub-text">1：乘坐<text style="color:red;">游2、12路</text>到<text style="color:red;">解放桥</text>下车步行10米即到</text>
+      <text class="sub-text">2：乘坐<text style="color:red;">119路、11路、9路外环、4路</text>公交车道石油公司下车步行190米即到</text>
+      <text class="text">专家QQ：<text class="sub-text">1205650055</text></text>
+      <text class="text">专家热线：<text class="sub-text">0518-81591078（点此可拨打）</text></text>
   </view>
+  <view style="display:flex;flex:1;background: transparent;height:100px;"></view>
 
 </view>

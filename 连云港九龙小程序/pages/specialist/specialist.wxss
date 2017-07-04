@@ -1,1 +1,33 @@
 /* specialist.wxss */
+.bgview{
+  display: flex;
+  height: 500px;
+  flex: 1;
+  background: rgb(210, 236, 253);
+  padding: 3px;
+  flex-direction: column;
+
+}
+
+.cell-list{
+  display: flex;
+  /*flex: 1;*/
+  flex-direction: row;
+  /*padding: 5px;*/
+  height: 100px;
+  width: 100%;
+}
+.cell-item{
+  display: flex;
+  margin: 2px;
+  flex: 1;
+  background: rgb(88,163,234);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img{
+   height: 70px;
+   width: 55px; 
+}

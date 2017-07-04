@@ -2,13 +2,13 @@
 .bgview{
   display: flex;
   height: 100%;
-  width: 100%;
   background: rgb(210, 236, 253);
   flex-direction: column;
- 
 }
 
 .title{
+  margin-top: 10px;
+  margin-left: 8px;
   font-size: 15pt;
   font-weight: 500;
 }
@@ -22,10 +22,22 @@
   border-radius: 10px;
   flex-direction: column;
   border: 1px solid lightgray;
+
 }
 
 .img{
     height: 100px;
     width: 100%;
-    /*margin: 5px;*/
+}
+.text{
+  margin-top: 8px;
+  font-weight: 500;  
+  font-family: h
+
+}
+.sub-text{
+  margin-top: 8px;
+  font-size: 10pt;
+  font-weight: normal;
+  line-height: 24px;
 }

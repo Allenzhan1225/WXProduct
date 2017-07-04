@@ -1,12 +1,56 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/survey/survey",
+    "pages/specialist/specialist",
+    "pages/technology/technology",
+    "pages/way/way"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "连云港九龙医院",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#626567",
+    "selectedColor": "#0068c4",
+    "backgroundColor": "#fbfbfb",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "",
+      "selectedIconPath": ""
+    },
+    {
+      "pagePath": "pages/survey/survey",
+      "text": "概况",
+      "iconPath": "",
+      "selectedIconPath": ""
+    },
+    {
+      "pagePath": "pages/specialist/specialist",
+      "text": "专家",
+      "iconPath": "",
+      "selectedIconPath": ""
+    },
+    {
+      "pagePath": "pages/technology/technology",
+      "text": "技术",
+      "iconPath": "",
+      "selectedIconPath": ""
+    },
+    {
+      "pagePath": "pages/way/way",
+      "text": "路线",
+      "iconPath": "",
+      "selectedIconPath": ""
+    }
+
+    ]
   }
+
+
 }

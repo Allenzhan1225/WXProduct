@@ -8,11 +8,22 @@ Page({
   
   },
 
+
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
   
+  },
+
+
+  //拨打电话
+  callPhone:function(res){
+    console.log(res);
+    wx.makePhoneCall({
+      phoneNumber: '1340000' //仅为示例，并非真实的电话号码
+    })
   },
 
   /**

@@ -3,9 +3,32 @@
   display: flex;
   padding: 5px;
   flex-direction: column;
+  height: 700px;
+  background-color: rgb(210, 236, 253);
 }
 .cell-list{
   display: flex;
   flex-direction: row;
   /*width:  device-width;*/
+  margin:4px;
+  background: white;
+  border-radius: 6px;
+ 
+}
+
+.img{
+  height: 70px;
+  width: 70px;
+  margin: 8px;
+}
+
+.cell-item{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.cell-item text {
+  margin: 8px;
+  font-size:10pt;
 }

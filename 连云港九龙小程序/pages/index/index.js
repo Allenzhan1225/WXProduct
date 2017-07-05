@@ -41,12 +41,9 @@ Page({
     })
   },
   onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    sleep(50000);
-    wx.vibrateLong(res)({
-     
-    })
+    console.log('onLoad');
+    var that = this;
+
 
 
 

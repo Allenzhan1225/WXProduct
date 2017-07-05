@@ -6,29 +6,6 @@
     </view>
     <!--导航界面-->
     
-    <!--<view wx:for="{{navTitle}}"  class="nav">
-      <view >
-          <text style="color:white;">{{item}}<text style="color:black">|</text></text>
-      </view> 
-    </view>-->
-<!--
-    <view class="view">
-      <view class="" style="height:30px;background: rgb(9, 74, 144);width:20%;">
-          <text style="color:white; text-align: center">首页<text style="color:black;margin-left: 10px;">|</text></text>
-      </view>
-      <view class="" style="height:30px;background: rgb(9, 74, 144);;width:20%">
-          <text style="color:white; text-align: center">概况<text style="color:black;margin-left: 10px;">|</text></text>
-      </view>
-      <view class="" style="height:30px;background: rgb(9, 74, 144);;width:20%">
-          <text style="color:white; text-align: center">专家<text style="color:black;margin-left: 10px;">|</text></text>
-      </view>
-      <view class="" style="height:30px;background: rgb(9, 74, 144);;width:20%">
-          <text style="color:white; text-align: center">技术<text style="color:black;margin-left: 10px;">|</text></text>
-      </view>
-      <view class="" style="height:30px;background: rgb(9, 74, 144);;width:20%">
-           <text style="color:white; text-align: center">路线<text style="color:black;margin-left: 10px;"></text></text>
-      </view>
-    </view>-->
 
     <view class="nav1" style="background: rgb(9, 74, 144);">
         <view class="item1" >
@@ -55,7 +32,7 @@
 <!--轮播图片界面-->
 <swiper indicator-dots="true"
   autoplay="true" interval="2000" duration="1000" class="swiper" indicator-color="rgb(11,88,172)">
-  <block wx:for="{{imgUrls}}">
+  <block wx:for="{{imgUrls}}" wx:key="swiper">
     <swiper-item>
       <image src="{{item}}" class="slide-image"  />
     </swiper-item>
@@ -71,8 +48,8 @@
 
 <!--列表界面-->
 <!--<template is="list" data="{{...item}}"/>-->
-<block wx:for="{{list}}">
-  <view class="list-cell">
+<block wx:for="{{list}}" wx:key="list">
+  <view class="list-cell" >
        <image src="{{item.img}}"></image>
        <view class="list-celltitle">
           <view class="item_title" ><text style="color:{{item.color}}">{{item.title}}</text></view>

@@ -22,7 +22,7 @@ Page({
   callPhone:function(res){
     console.log(res);
     wx.makePhoneCall({
-      phoneNumber: '1340000' //仅为示例，并非真实的电话号码
+      phoneNumber: '0518-81591078' //仅为示例，并非真实的电话号码
     })
   },
 

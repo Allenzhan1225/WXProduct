@@ -5,7 +5,9 @@
     "pages/survey/survey",
     "pages/specialist/specialist",
     "pages/technology/technology",
-    "pages/way/way"
+    "pages/way/way",
+    "pages/specialist/detial/detial",
+    "pages/technology/detial/detial"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,39 +20,31 @@
     "selectedColor": "#0068c4",
     "backgroundColor": "#fbfbfb",
     "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "",
-      "selectedIconPath": ""
-    },
-    {
-      "pagePath": "pages/survey/survey",
-      "text": "概况",
-      "iconPath": "",
-      "selectedIconPath": ""
-    },
-    {
-      "pagePath": "pages/specialist/specialist",
-      "text": "专家",
-      "iconPath": "",
-      "selectedIconPath": ""
-    },
-    {
-      "pagePath": "pages/technology/technology",
-      "text": "技术",
-      "iconPath": "",
-      "selectedIconPath": ""
-    },
-    {
-      "pagePath": "pages/way/way",
-      "text": "路线",
-      "iconPath": "",
-      "selectedIconPath": ""
-    }
-
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/specialist/specialist",
+        "text": "专家",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/technology/technology",
+        "text": "技术",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/way/way",
+        "text": "路线",
+        "iconPath": "",
+        "selectedIconPath": ""
+      }
     ]
   }
-
-
 }

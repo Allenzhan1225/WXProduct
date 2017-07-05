@@ -1,4 +1,23 @@
 <!--technology.wxml-->
 <view class="bgview">
+<!--color:rbg(154,135,135);-->
+  <block wx:for="{{list}}" wx:key="list">
+    <view class="">
+        <view class="cell-list"  catchtap="cellClick" id="{{item.id}}">
+            <image src="{{item.img}}" class="img" mode="scaleToFill" ></image>
+            <view class="cell-item">
+                <text>{{item.title}}</text>
+                <text>{{item.detial}}</text>
+                <view class="" style="display:flex;flex-direction:row;">
+                    <view class="" style="flex:1"></view>
+                    <text style="width:100px;text-align:right; color: rgb(154, 135, 135);">浏览{{item.num}}次</text>
+                </view>
+            
+            </view>
+       </view>
+    </view>
+    
+  </block>
 
+      
 </view>

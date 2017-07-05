@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+
   },
 
   /**
@@ -13,6 +13,18 @@ Page({
    */
   onLoad: function (options) {
   
+  },
+
+  //点击事件
+  cellClick: function (res){
+    console.log(res);
+    var index = res.currentTarget.id;
+    console.log(index);
+    var that = this;
+    wx.navigateTo({
+      url: 'detial/detial?id='+index,
+    })
+   
   },
 
   /**

@@ -1,7 +1,9 @@
 /* specialist.wxss */
 .bgview{
   display: flex;
-  height: 500px;
+  height:650px;
+  /*height: 100%;*/
+  width: 100%;
   flex: 1;
   background: rgb(210, 236, 253);
   padding: 3px;

@@ -6,23 +6,23 @@
             <text style="color:white;font-size:8pt;margin-top:8px;">张志宏 北大医学博士后</text>
         </view>
         <view class="cell-item" bindtap="cellClick" id="2">
-            <image src="../../images/home/zhang.jpg" mode="scaleToFill" class="img"></image>
+            <image src="../../images/home/zhuangjia2.jpg" mode="scaleToFill" class="img"></image>
             <text style="color:white;font-size:8pt;margin-top:8px;">李德华 学科带头人</text>
         </view>
     </view>
     <view class="cell-list">
         <view class="cell-item" bindtap="cellClick" id="3">
-          <image src="../../images/home/zhang.jpg" mode="scaleToFill" class="img"></image>
+          <image src="../../images/home/zhuangjia3.jpg" mode="scaleToFill" class="img"></image>
           <text style="color:white;font-size:8pt;margin-top:8px;">高金安 前列腺科研组负责人</text>
         </view>
        <view class="cell-item" bindtap="cellClick" id="4"> 
-            <image src="../../images/home/zhang.jpg" mode="scaleToFill" class="img"></image>
+            <image src="../../images/home/zhuangjia4.jpg" mode="scaleToFill" class="img"></image>
             <text style="color:white;font-size:8pt;margin-top:8px;">张金平 性功能障碍科研组负责人</text>
         </view>
     </view>
     <view class="cell-list">
         <view class="cell-item"  bindtap="cellClick" id="5">
-            <image src="../../images/home/zhang.jpg" mode="scaleToFill" class="img"></image>
+            <image src="../../images/home/zhuangjia5.jpg" mode="scaleToFill" class="img"></image>
             <text style="color:white;font-size:8pt;margin-top:8px;">孙如亮 男科主任</text>
         </view>
          <view class="cell-item" style="background:transparent;"> </view>

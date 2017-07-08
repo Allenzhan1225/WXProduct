@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
 <view class="container">
     <!--头部logo 部分-->
     <view class="header">
@@ -7,7 +8,7 @@
     <!--导航界面-->
     
 
-    <view class="nav1" style="background: rgb(9, 74, 144);">
+    <!--<view class="nav1" style="background: rgb(9, 74, 144);">
         <view class="item1" >
             <text style="text-align: center;color:white;font-size:12pt;">首页</text><text style="color:white;font-size:12pt;margin-left:8px;">|</text>
         </view>
@@ -23,7 +24,7 @@
         <view class="item1" >
             <text style="text-align: center;color:white;font-size:12pt;">路线</text><text style="color:white;font-size:12pt;margin-left:8px;"></text>
         </view>
-    </view>
+    </view>-->
 
 
 
@@ -48,24 +49,29 @@
 
 <!--列表界面-->
 <!--<template is="list" data="{{...item}}"/>-->
+
+
 <block wx:for="{{list}}" wx:key="list">
-  <view class="list-cell" >
-       <image src="{{item.img}}"></image>
-       <view class="list-celltitle">
+  <view class="block-item" bindtap="cellClick" id="{{item.id}}">
+       <image src="{{item.img}}" class="img"></image>
+       <view class="text-view">
           <view class="item_title" ><text style="color:{{item.color}}">{{item.title}}</text></view>
-          <view class="item_title" style="font-size:12pt;"><text>{{item.detial}}</text></view>
+          <view class="item_title" style="font-size:11pt;"><text>{{item.detial}}</text></view>
        </view>
-       <view class="" style="background:{{item.color}};height:58px;width:4px;margin:0px;"></view>
+       <view class="" style="background:{{item.color}};height:61px;width:4px;margin:0px;"></view>
   </view>
 </block>
+
+
+
 
 <view class="list-cell" style="height:75px;width:95%">
   <image src="../../images/home/index_7.jpg" style="height:75px;width:115px;"></image>
     <view class="news">
-        <view class="" style="margin-top:8px;margin-left:8px;">
+        <view class="" style="margin-top:2px;margin-left:8px;" bindtap="cellClick" id="4">
           <text class="texttitle"> 1.省内首家"生物补片早泄治疗技术"在九龙开展</text>
         </view>
-        <view class="" style="margin-top:8px;margin-left:8px;">
+        <view class="" style="margin-top:0px;margin-left:8px;" bindtap="cellClick" id="5">
           <text class="texttitle">2.九龙医院携手滴滴打车送健康</text>
         </view>
     </view>
@@ -80,10 +86,10 @@
      
   </view>
 </block>-->
-<view class="" style="height:160px;width:100%;display:flex;flex-direction:row; margin-top:10px;">
+<!--<view class="" style="height:260px;width:100%;display:flex;flex-direction:row; margin-top:10px;">-->
 
 <!--第一排-->
-    <view class="" style="display:flex;flex:1;display:flex;background:transparent;flex-direction:column;justify-content:center;align-items:flex-center;margin:8px;">
+    <!--<view class="" style="display:flex;flex:1;display:flex;background:transparent;flex-direction:column;justify-content:center;align-items:flex-center;margin:8px;">
         <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin:8px;background:white;">
            <image src="../../images/home/index_8.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
         </view>
@@ -93,11 +99,22 @@
         <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin-top:8px; background:white;">
            <image src="../../images/home/index_10.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
         </view>
-    </view>
+    </view>-->
+     <!--<view class="" style="display:flex;flex:1;display:flex;background:transparent;flex-direction:column;justify-content:center;align-items:flex-center;margin:8px;">
+        <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin:8px;background:white;">
+           <image src="../../images/home/index_8.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
+        </view>
+         <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin-top:8px;background:white;">
+           <image src="../../images/home/index_9.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
+         </view>
+         <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin-top:8px;background:white;">
+           <image src="../../images/home/index_10.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
+         </view>
+    </view>-->
 
 <!--第二排-->
 
-    <view class="" style="display:flex;flex:1;display:flex;background:transparent;flex-direction:column;justify-content:center;align-items:flex-center;margin:8px;">
+    <!--<view class="" style="display:flex;flex:1;display:flex;background:transparent;flex-direction:column;justify-content:center;align-items:flex-center;margin:8px;">
         <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin:8px;background:white;">
            <image src="../../images/home/index_12.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
         </view>
@@ -107,10 +124,10 @@
          <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin-top:8px;background:white;">
            <image src="../../images/home/index_13.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
          </view>
-    </view>
+    </view>-->
 <!--第三排-->
-
-    <view class="" style="display:flex;flex:1;background:transparent;display:flex;flex-direction:column;justify-content:center;align-items:flex-center;margin:8px;">
+<!--transparent-->
+    <!--<view class="" style="display:flex;flex:1;background:transparent;display:flex;flex-direction:column;justify-content:center;align-items:flex-center;margin:8px;">
          <view class="" style="display:flex;flex:1;justify-content:center;align-items:flex-center;margin:8px;background:white;">
            <image src="../../images/home/index_14.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
          </view>
@@ -121,6 +138,14 @@
            <image src="../../images/home/index_16.jpg" style="height:35px;width:45px;" mode="scaleToFill"></image>
          </view>
     </view>
+</view>-->
+
+
+<view class="" style="margin-top:20px;" >
+         <view class="wxParse">
+             <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+         </view>
+    
 </view>
 
 </view>

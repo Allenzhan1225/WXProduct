@@ -7,7 +7,8 @@
     "pages/technology/technology",
     "pages/way/way",
     "pages/specialist/detial/detial",
-    "pages/technology/detial/detial"
+    "pages/technology/detial/detial",
+    "pages/index/detial/detial"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,34 +17,34 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#626567",
-    "selectedColor": "#0068c4",
-    "backgroundColor": "#fbfbfb",
-    "borderStyle": "white",
+    "color": "#FFFFFF",
+    "selectedColor": "#FFFFFF",
+    "backgroundColor": "#1878D8",
+    "borderStyle": "#FFFFFF",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "iconPath": "images/home/foot_img1.jpg",
+        "selectedIconPath": "images/home/foot_img1.jpg"
       },
       {
         "pagePath": "pages/specialist/specialist",
         "text": "专家",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "iconPath": "images/home/foot_img3.jpg",
+        "selectedIconPath": "images/home/foot_img3.jpg"
       },
       {
         "pagePath": "pages/technology/technology",
         "text": "技术",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "iconPath": "images/home/foot_img4.jpg",
+        "selectedIconPath": "images/home/foot_img4.jpg"
       },
       {
         "pagePath": "pages/way/way",
         "text": "路线",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "iconPath": "images/home/foot_img5.jpg",
+        "selectedIconPath":"images/home/foot_img5.jpg"
       }
     ]
   }

@@ -1,4 +1,6 @@
 // detial.js
+
+var WxParse = require('../../../wxParse/wxParse.js');
 Page({
 
   /**
@@ -20,6 +22,7 @@ Page({
           {
             'id':"1",
             "name":"张志宏",
+            "img":"../../../images/home/zhang.jpg",
             "expertsTitles":"北京医学博士后",
             "type":"专家团队",
             "goodat": "前列腺增生(肥大)等离子微创技术，腹腔镜微创技术、难治性前列腺炎、性功能障碍等泌尿疾病。",
@@ -29,6 +32,7 @@ Page({
           {
             'id': "2",
             "name": "李德华",
+            "img": "../../../images/home/zhuangjia2.jpg",
             "expertsTitles": "学科带头人",
             "type": "专家团队",
             "goodat":"对前列腺疾病、性功能障碍、泌尿生殖整形、男性不育、泌尿生殖感染等男科疾病有深厚的理论和临床经验。",
@@ -37,6 +41,7 @@ Page({
           {
             'id': "3",
             "name": "高金安",
+            "img": "../../../images/home/zhuangjia3.jpg",
             "expertsTitles": "前列腺科研组负责人",
             "type": "专家团队",
             "goodat": "急慢性前列腺炎、生殖感染、泌尿感染等疑难杂症。",
@@ -46,6 +51,7 @@ Page({
           {
             'id': "4",
             "name": "张金平",
+            "img": "../../../images/home/zhuangjia4.jpg",
             "expertsTitles": "性功能障碍科研组负责人",
             "type": "专家团队",
             "goodat": "生殖整形、性功能障碍、男性不育等男科疾病的诊疗。",
@@ -54,6 +60,7 @@ Page({
           {
             'id': "5",
             "name": "孙如亮",
+            "img": "../../../images/home/zhuangjia5.jpg",
             "expertsTitles": "男科主任",
             "type": "专家团队",
             "goodat": "男性不育、生殖整形、性功能障碍",
@@ -74,6 +81,64 @@ Page({
     this.setData({
       id: options.id,
     });
+ var that = this;
+ var table = `	<div>
+				<table style="border: 1px solid #CCC;">
+					<tr>
+						<th style="background-color: #104E8B; color: #FFF;font-weight: bold; width:50px">&nbsp;</th>	
+						<th style="background-color: #104E8B; color: #FFF;font-weight: bold;width:50px">周五</th>	
+						<th style="background-color: #104E8B; color: #FFF;font-weight: bold;width:50px">周六</th>	
+						<th style="background-color: #104E8B; color: #FFF;font-weight: bold;width:50px">周日</th>	
+						<th style="background-color: #104E8B; color: #FFF;font-weight: bold;width:50px">周一</th>	
+						<th style="background-color: #104E8B; color: #FFF;font-weight: bold;width:50px">周二</th>	
+						<th style="background-color: #104E8B; color: #FFF;font-weight: bold;width:50px">周三</th>	
+						<th style="background-color: #104E8B; color: #FFF;font-weight: bold;width:50px">周四</th>	
+					
+					</tr>
+					<tr>
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">早班</td>
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>			
+					</tr>
+					<tr>
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">中班</td>
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>			
+					</tr>
+
+						<tr>
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">晚班</td>
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;</td>			
+					</tr>
+					<tr>
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">全天</td>
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;√</td>
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;√</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;√</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;√</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;√</td>	
+						<td style="padding: 4px;margin: 3px;border: 1px solid #CCC;">&nbsp;&nbsp;&nbsp;√</td>			
+					</tr>
+				</table>
+
+			</div>
+
+    `;
+
+    WxParse.wxParse('article', 'html', table, that, 5);
 
   },
 

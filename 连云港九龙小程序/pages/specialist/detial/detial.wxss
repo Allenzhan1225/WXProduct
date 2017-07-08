@@ -1,12 +1,14 @@
 /* detial.wxss */
 /*var height=600px;*/
-
+@import "../../../wxParse/wxParse.wxss";
 .bgview{
   display: flex;
-  height: 800px;
+  /*height: px;*/
+  flex: 1;
   width: 100%;
   flex-direction: column;
   background: rgb(210, 236, 253);
+
 }
 
 .header{
@@ -21,7 +23,7 @@
 .header-item{
   display: flex;
   flex-direction: column;
-  flex: 1;
+  height: 100%;
   margin-top: 8px;
 }
 
@@ -30,18 +32,33 @@
     height: 80px;
     width: 80px;
     margin: 10px;
+   
 }
 
 .text{
   font-size: 10pt;
   color: white;
-  margin: 4px;
+  margin-top:4px;
+  /*margin: 4px;*/
+
+}
+.shanchang{
+  display: flex;
+  height: 70px;
+  width: 93%;
+  margin: 8px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
 
 }
 .center{
   display: flex;
-  /*flex:1;*/
-  height: 50px;
+  flex:1;
+  /*height: 300px;*/
   width: 93%;
   margin: 8px;
   background-color: white;
@@ -55,8 +72,8 @@
 
 .center1{
   display: flex;
-  /*flex:1;*/
-  height: 100px;
+  flex:1;
+  /*height: 100px;*/
   width: 93%;
   margin: 8px;
   background-color: white;

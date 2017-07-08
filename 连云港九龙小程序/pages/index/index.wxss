@@ -1,10 +1,16 @@
 /**index.wxss**/
+@import "../../wxParse/wxParse.wxss";
 .container{
   display: flex;
+  /*flex: 1;*/
   padding: 0px;
   width: 100%;
   background: rgb(210, 236, 253);
   align-items: flex-start;
+  justify-content: center;
+    /*"selectedColor": "rgb(295,246,56)",
+     "backgroundColor": "rgb(34,123,215)",*/
+
 }
 
 
@@ -83,9 +89,11 @@
 .list-cell{
   display: flex;
   height: 58px;
-  width: 98%; 
+  width: 100%; 
   flex-direction: row;
+
   margin: 8px 8px 0px 8px;
+  padding-right: 8px;
 }
 .list-cell2{
   display: flex;
@@ -93,30 +101,28 @@
   /*display: list-item;*/
   height: 58px;
   width: 98%; 
-  /*flex-direction: row;*/
-  /*flex-wrap: wrap;*/
+ 
   margin: 8px 8px 0px 8px;
   column-count:2;
 }
 
 .list-cell image {
-  height: 58px;
-  width: 65px;
+  height: 62px;
+  width: 71px;
 }
 
 
 .list-celltitle{
-
-  width: 97%;
+  display: flex;
+  flex: 0.94;
   flex-direction: column;
   background: white;
-  margin-right: 8px;
 
 }
 .item_title{
   margin-left: 8px;
   margin-top: 5px;
-  font-size: 17pt;
+  font-size: 15pt;
 }
 
 .news{
@@ -129,5 +135,34 @@
 
 .texttitle{
   font-size: 10pt;
+
+}
+
+
+
+.block-item{
+    display: flex;
+    height: 62px;
+    /*flex: 1;*/
+    flex-direction: row;
+    width: 95%;
+    padding: 8px;
+ 
+
+
+}
+
+.img {
+  height: 62px;
+  width: 65px;
+}
+
+.text-view{
+  display: flex;
+  /*width: 80%;*/
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
 
 }

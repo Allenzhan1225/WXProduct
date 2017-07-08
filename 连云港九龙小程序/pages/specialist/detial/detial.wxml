@@ -1,7 +1,8 @@
 <!--detial.wxml-->
+<import src="../../../wxParse/wxParse.wxml"/> 
 <view class="bgview">
       <view class="header" >
-            <image src="../../../images/home/zhang.jpg" class="img"></image>
+            <image src="{{dataSource[id -1].img}}" class="img"></image>
             <view class="header-item">
                   <text class="text">{{dataSource[id -1].name}}</text>
                   <text class="text">专家名称:{{dataSource[id -1].name}}</text>
@@ -10,50 +11,21 @@
             </view>
       </view>
       <text style="margin:8px;">擅长治疗</text>
-      <view class="center">
+      <view class="shanchang">
         <text style="font-size:9pt">{{dataSource[id -1].goodat}}</text>
       </view>
       <text style="margin:8px;">专家简介</text>
       <view class="center" style="flex:1">
         <text style="font-size:9pt">{{dataSource[id -1].jianjie}}</text>
       </view>
-      <!--<text style="margin:8px;">门诊排班</text>-->
-      <!--<view class="center1">-->
-                  <!--<text>nihao </text>-->
-                  <!--<view class="table">
-                    <view class="tr bg-w">
-                      <view class="th">head1</view>
-                      <view class="th">head2</view>
-                      <view class="th ">head3</view>
-                    </view>
-                    <block wx:for="{{listData}}" wx:key="{{code}}">
-                      <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
-                        <view class="td">{{item.code}}</view>
-                        <view class="td">{{item.text}}</view>
-                        <view class="td">{{item.type}}</view>
-                      </view>
-                      <view class="tr" wx:else>
-                        <view class="td">{{item.code}}</view>
-                        <view class="td">{{item.text}}</view>
-                        <view class="td">{{item.type}}</view>
-                      </view>
-                    </block>
-                  </view>-->
-        <!--<view class="table">
-            <view class="tr">
-                <view class="th">标题1</view>
-                <view class="th">标题2</view>
-                <view class="th">标题3</view>
-                <view class="th">标题4</view>
-                <view class="th">标题5</view>
-            </view>
-            <view class="tr" wx:for="{{[1,2,3,4,5]}}">
-                <view class="td">{{内容}}</view>
-                <view class="td">{{内容}}</view>
-                <view class="td">{{内容}}</view>
-                <view class="td">{{内容}}</view>
-                <view class="td">{{内容}}</view>
-            </view>
-        </view>-->
-      <!--</view>-->
+
+
+
+      <text style="margin:8px;">门诊排班</text>
+      <view class="center1">
+         <view class="wxParse">
+             <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+         </view>
+    
+      </view>
 </view>

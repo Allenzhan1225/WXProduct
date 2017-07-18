@@ -17,7 +17,7 @@ Page({
 
   //点击事件
   cellClick: function (res){
-    // console.log(res);
+   console.log(res);
     var index = res.currentTarget.id;
     // console.log(index);
     var that = this;

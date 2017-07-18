@@ -1,7 +1,7 @@
 <!--specialist.wxml-->
 <view class="bgview">
     <view class="cell-list">
-        <view class="cell-item" bindtap="cellClick" id="1" name="你好">
+        <view class="cell-item" bindtap="cellClick" id="1" name="你好" data-name="allen" data-age="25" data-sex="男">
             <image src="../../images/home/zhang.jpg" mode="scaleToFill" class="img"></image>
             <text style="color:white;font-size:8pt;margin-top:8px;">张志宏 北大医学博士后</text>
         </view>

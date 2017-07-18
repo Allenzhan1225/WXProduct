@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 var WxParse = require('../../wxParse/wxParse.js');
-var app = getApp()
+var app = getApp();
 Page({
   data: {
     motto: 'Hello World',
@@ -48,6 +48,7 @@ Page({
   },
 
 
+//http://www.51xuediannao.com/json.php?typeid=34&page=1&pagesize=10
 
   //事件处理函数
   bindViewTap: function() {
@@ -56,6 +57,9 @@ Page({
     })
   },
   onLoad: function () {
+    app.func.req('/json.php?typeid=34&page=1&pagesize=10', {}, function (res) {
+      console.log(res)
+    }); 
     console.log('onLoad');
     var that = this;
 

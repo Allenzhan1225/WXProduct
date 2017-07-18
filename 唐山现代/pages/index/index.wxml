@@ -2,11 +2,11 @@
 <view class="container">
   <image src="../../images/banner.png"  class="img">  </image>
 
-  <block wx:for="{{datalist}}" >
+  <block wx:for="{{datalist}}" wx:key="allen">
     <view class="listitem">
         <image src="{{item.img}}"></image>
         <view class="subview">
-           <view class="subview-item" wx:for="{{item.title}}" wx:for-item="listitem">
+           <view class="subview-item" wx:for="{{item.title}}" wx:for-item="listitem" wx:key="allenzhan">
               <text style="font-size:10pt" >{{listitem}}</text>
            </view>
         </view>

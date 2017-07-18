@@ -1,10 +1,26 @@
 <!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <image src="../../images/banner.png"  class="img">  </image>
+
+  <block wx:for="{{datalist}}" >
+    <view class="listitem">
+        <image src="{{item.img}}"></image>
+        <view class="subview">
+           <view class="subview-item" wx:for="{{item.title}}" wx:for-item="listitem">
+              <text style="font-size:10pt" >{{listitem}}</text>
+           </view>
+        </view>
+    </view>
+  </block>
+
+  <view class="" style="margin-top:8px;">现代男科:让看病成为一种享受</view>
+  <view class="foot">
+      <image src="../../images/index1.png"></image>
+      <image src="../../images/index2.png"></image>
+      <image src="../../images/index3.png"></image>
+      <image src="../../images/index4.png"></image>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+
+
+
 </view>

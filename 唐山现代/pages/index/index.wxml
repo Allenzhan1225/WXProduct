@@ -3,7 +3,7 @@
   <image src="../../images/banner.png"  class="img">  </image>
 
   <block wx:for="{{datalist}}" wx:key="allen">
-    <view class="listitem">
+    <view class="listitem" catchtap="cellClick" data-id="{{item.id}}">
         <image src="{{item.img}}"></image>
         <view class="subview">
            <view class="subview-item" wx:for="{{item.title}}" wx:for-item="listitem" wx:key="allenzhan">

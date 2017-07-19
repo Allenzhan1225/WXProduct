@@ -1,0 +1,9 @@
+<!--detial.wxml-->
+<import src="../../../wxParse/wxParse.wxml"/> 
+<view class="bg">
+  <image src="{{dataSource.img}}" mode="scaleToFill" style="height:120px;width:100px"></image>
+  <view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+</view>
+

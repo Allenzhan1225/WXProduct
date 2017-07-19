@@ -17,6 +17,22 @@ Page({
 
 
   },
+
+
+  //点击事件处理函数
+  cellClick:function(event){
+
+    var id = event.currentTarget.dataset.id
+ 
+    wx.navigateTo({
+      url: './detial/detial?id='+id,
+    })
+
+  },
+
+
+
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

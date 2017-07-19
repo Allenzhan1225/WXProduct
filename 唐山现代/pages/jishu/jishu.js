@@ -12,9 +12,9 @@ Page({
         { "id": "2", "img": '../../images/js_s3.png', "height": 0},
         { "id": "3", "img": '../../images/js_s4.png', "height": 0},
         { "id": "4", "img": '../../images/js_s5.png', "height": 0},
-        { "id": "5", "img": '../../images/js_s6.png', "height": 0},
-        { "id": "6", "img": '../../images/js_s7.png', "height": 0},
-        { "id": "7", "img": '../../images/js_s8.png', "height": 0}
+        // { "id": "5", "img": '../../images/js_s6.png', "height": 0},
+        // { "id": "6", "img": '../../images/js_s7.png', "height": 0},
+        // { "id": "7", "img": '../../images/js_s8.png', "height": 0}
        
 
     ],
@@ -49,6 +49,16 @@ Page({
       console.log(this.data.list)
 
   },
+
+
+  cellClick:function(event){
+    console.log(event.currentTarget.dataset.id);
+    wx.navigateTo({
+      url: './detial/detial?id=' + event.currentTarget.dataset.id
+    })
+
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

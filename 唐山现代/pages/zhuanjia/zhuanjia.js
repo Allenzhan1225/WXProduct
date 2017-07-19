@@ -23,6 +23,20 @@ Page({
   
   },
 
+
+  // 列表被点击
+  cellClick : function (event){
+
+    var temp = event.currentTarget.dataset.item;
+    wx.navigateTo({
+      url: './detial/detial?data=' + JSON.stringify(temp),
+    })
+
+  },
+
+
+
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

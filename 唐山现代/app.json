@@ -4,7 +4,10 @@
     "pages/logs/logs",
     "pages/jishu/jishu",
     "pages/zhuanjia/zhuanjia",
-    "pages/luxian/luxian"
+    "pages/luxian/luxian",
+    "pages/zhuanjia/detial/detial",
+    "pages/jishu/detial/detial",
+    "pages/index/detial/detial"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,9 +20,9 @@
     "backgroundColor": "#f8f8ff",
     "list": [
       {
-      "pagePath": "pages/index/index",
-      "text": "首页"
-     },
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
       {
         "pagePath": "pages/zhuanjia/zhuanjia",
         "text": "专家"
@@ -34,6 +37,4 @@
       }
     ]
   }
-
-
 }

@@ -1,0 +1,31 @@
+
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">男科</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">妇科</view>
+</view>
+<view class="swiper-tab-temp"></view>
+<view>
+  <swiper current="{{currentTab}}" autoplay="{{flase}}" class="swiper-box" duration="300" style="height:600px" bindchange="bindChange">
+    <swiper-item >
+       <view class="container">
+          <block wx:for="{{datalist}}" wx:key="allen">
+            <view class="listitem" catchtap="cellClick" data-id="{{item.id}}">
+                <image src="{{item.img}}"></image>
+                <view class="subview">
+                  <view class="subview-item" wx:for="{{item.title}}" wx:for-item="listitem" wx:key="allenzhan">
+                      <text style="font-size:10pt" >{{listitem}}</text>
+                  </view>
+                </view>
+            </view>
+          </block>
+
+      </view>
+    </swiper-item>
+
+
+    <swiper-item >
+      绿色内容
+    </swiper-item>
+
+  </swiper>
+</view>

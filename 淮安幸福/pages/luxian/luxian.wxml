@@ -1,0 +1,19 @@
+<!--luxian.wxml-->
+<view class="bg">
+    <image src="http://www.haxfyy.com/uploads/image/20170603/20170603084218_84711.jpg" mode="widthFix"></image>
+    <text >淮安幸福医院地址： <text style="color:red">淮安市淮阴区北京北路27号(市工商局旁边)</text></text>
+    <text >乘坐市内公交车: <text style="color:red">12路、16路、116路车到工商局站下即可;</text></text>
+    <text style="color:red">乘坐33路车到保安公司站下向南过红绿灯即可;;</text>
+    <text style="color:red">乘坐4路、22路、游2路、28路、26路、81路、86路到中天花园站下再向北行走100米即可。;</text>
+
+     <text style="color:red">免费乘坐滴滴专车：;</text>
+     <text >淮安幸福医院与滴滴打车达成战略合作，双方将联手在生活服务领域开启免费专车就医活动。凡淮安市内网络预约首次就诊的患者， <text style="color:red">当天可免费乘坐滴滴专车到医院就诊,</text>仅限 <text style="color:red">100位</text> </text>
+    <text catchtap="click">有任何疑问可拨打咨询热线：0517-83654599</text>
+    <text>1、本院就诊患者较多，请提前网上预约挂号。</text>
+    <text>2、复诊患者不需要挂号，可直接到导医台登记后就诊。</text>
+    <text>3、医保定点单位，医保卡可以正常使用，持本人身份证，医保卡可直接使用。</text>
+     <text catchtap="click" >  不清楚路线可拨打咨询热线：0517-83654599</text>
+
+    
+
+</view>

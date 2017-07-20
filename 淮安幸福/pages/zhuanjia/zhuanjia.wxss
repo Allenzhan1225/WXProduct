@@ -1,0 +1,37 @@
+/* zhuanjia.wxss */
+.bg{
+  display: flex;
+  flex-direction: column;
+  width: 94%;
+  padding: 3%;
+}
+
+.listview{
+ display: flex;
+ flex-direction: row;
+ width: 94%;
+ padding: 3%;
+ background: rgb(245,245,248);
+ margin-top: 8px;
+ border: 1px solid rgb(226,226,226);
+}
+
+.listview image {
+  width: 100px;
+  height: 120px;
+
+}
+.rightview{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  margin-top: 8px;
+  margin-left: 6px;
+}
+.text{
+  font-size: 16pt;
+  font-weight: 700;
+  color: rgb(0,131,179);
+
+}

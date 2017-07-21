@@ -6,10 +6,10 @@
 <view class="swiper-tab-temp"></view>
 <view>
   <swiper current="{{currentTab}}" autoplay="{{flase}}" class="swiper-box" duration="300" style="height:600px" bindchange="bindChange">
-    <swiper-item >
+    <swiper-item  style="height:600px;">
        <view class="container">
           <block wx:for="{{datalist}}" wx:key="allen">
-            <view class="listitem" catchtap="cellClick" data-id="{{item.id}}">
+            <view class="listitem" catchtap="cellClick" data-id="{{item.id}}" data-status="0">
                 <image src="{{item.img}}"></image>
                 <view class="subview">
                   <view class="subview-item" wx:for="{{item.title}}" wx:for-item="listitem" wx:key="allenzhan">
@@ -23,8 +23,8 @@
     </swiper-item>
 
 
-    <swiper-item autoplay="{{true}}" class="swiper-box" duration="300" style="height:600px" >
-      <swiper>
+    <swiper-item style="margin-bottom:8px;" style="height:680px;">
+      <swiper autoplay="{{true}}" class="swiper-box" duration="1000" style="height:150px" indicator-dots="true"  indicator-color="white" indicator-active-color="red"  interval="2000">
           <swiper-item>
             <image src="http://fuke.haxfyy.com/lib/img/fla8.jpg" style="width:100%;height:150px"></image>
           </swiper-item>
@@ -35,7 +35,25 @@
             <image src="http://fuke.haxfyy.com/lib/img/fla5.jpg" style="width:100%;height:150px"></image> 
           </swiper-item>
       </swiper>
+
+       <scroll-view class="container"  scroll-y  style="height: 450px;">
+          <block wx:for="{{datalist1}}" wx:key="allen">
+            <view class="listitem" catchtap="cellClick" data-id="{{item.id}}" data-status="1">
+                <image src="{{item.img}}" mode="aspectFill"></image>
+                <view class="subview">
+                  <view class="subview-item" style="border: 1px solid rgb(212,5,110);" wx:for="{{item.title}}" wx:for-item="listitem" wx:key="allenzhan">
+                      <text style="font-size:10pt" >{{listitem}}</text>
+                  </view>
+                </view>
+            </view>
+          </block>
+
+     </scroll-view> 
+
+
     </swiper-item>
+
+
 
   </swiper>
 </view>

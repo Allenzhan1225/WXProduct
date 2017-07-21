@@ -7,14 +7,14 @@ Page({
   data: {
     list:[
       
-        {"id":"0","img":'../../images/js_s1.png',"height":0},
-        { "id": "1", "img": '../../images/js_s2.png', "height": 0 },
-        { "id": "2", "img": '../../images/js_s3.png', "height": 0},
-        { "id": "3", "img": '../../images/js_s4.png', "height": 0},
-        { "id": "4", "img": '../../images/js_s5.png', "height": 0},
-        // { "id": "5", "img": '../../images/js_s6.png', "height": 0},
-        // { "id": "6", "img": '../../images/js_s7.png', "height": 0},
-        // { "id": "7", "img": '../../images/js_s8.png', "height": 0}
+        {"id":"0","img":'../../images/js_s1.png',"height":0,"title":"体外冲击碎石机"},
+        { "id": "1", "img": '../../images/js_s2.png', "height": 0, "title": "半导体激光治疗仪"},
+        { "id": "2", "img": '../../images/js_s3.png', "height": 0,"title": "CSR光导泌尿治疗系统"},
+        { "id": "3", "img": '../../images/js_s4.png', "height": 0, "title":'UKF康复磁疗'},
+        { "id": "4", "img": '../../images/js_s5.png', "height": 0, "title": '美国电子真彩电子阴道镜'},
+        { "id": "5", "img": '../../images/js_s6.png', "height": 0, "title": '红外线乳透诊疗仪'},
+        { "id": "6", "img": '../../images/js_s7.png', "height": 0, "title": '腔道介入治疗仪'},
+        // { "id": "7", "img": '../../images/js_s8.png', "height": 0, "title": 'UKF康复磁疗'}
        
 
     ],

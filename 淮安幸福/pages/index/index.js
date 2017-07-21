@@ -91,6 +91,16 @@ Page({
       { "id": "4", "img": '../../images/p1_img6.png', "title": ["无精","弱精", "少精", "精液不液化", "死精症"] },
 
     ],
+    datalist1: [
+      { "id": "0", "img": 'http://fuke.haxfyy.com/lib/img/jkzt_wtrl2.jpg', "title": ["早孕检查", "人流常识", "人流前注意事项", "人流后注意事项", "微微保宫人流术"] },
+      { "id": "1", "img": 'http://fuke.haxfyy.com/lib/img/jkzt_byby2.jpg', "title": ["宫颈性不孕", "卵巢性不孕", "子宫性不孕", "习惯性流产", "免疫性不孕", "全身性疾病不孕"] },
+
+      { "id": "2", "img": 'http://fuke.haxfyy.com/lib/img/jkzt_fkyz2.jpg', "title": ["阴道炎", "盆腔炎", "附件炎", "外阴炎", "尿道炎", "输卵管炎"] },
+      { "id": "3", "img": 'http://fuke.haxfyy.com/lib/img/jkzt_fkwc2.jpg', "title": ["子宫肌瘤", "卵巢囊肿", "宫外孕", "卵软巢肿瘤", ] },
+   
+
+    ],
+
 
   },
   /*** 滑动切换tab***/
@@ -109,10 +119,13 @@ Page({
   //点击事件处理函数
   cellClick: function (event) {
 
-    var id = event.currentTarget.dataset.id
+    var id = event.currentTarget.dataset.id;
+    var status = event.currentTarget.dataset.status;
 
+    var obj = {"id":id,"status":status};
+    console.log(obj);
     wx.navigateTo({
-      url: './detial/detial?id=' + id,
+      url: './detial/detial?data=' + JSON.stringify(obj),
     })
 
   },

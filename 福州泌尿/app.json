@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/jishu/jishu",
+    "pages/zhuanjia/zhuanjia",
+    "pages/luxian/luxian",
+    "pages/zhuanjia/detial/detial",
+    "pages/jishu/detial/detial",
+    "pages/index/detial/detial"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "福州九龙泌尿专科医院",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#4169e1",
+    "backgroundColor": "#f8f8ff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/ts-01.png",
+        "selectedIconPath": "images/ts-02.png"
+      },
+      {
+        "pagePath": "pages/zhuanjia/zhuanjia",
+        "text": "专家",
+        "iconPath": "images/ts-03.png",
+        "selectedIconPath": "images/ts-04.png"
+      },
+      {
+        "pagePath": "pages/jishu/jishu",
+        "text": "技术",
+        "iconPath": "images/ts-07.png",
+        "selectedIconPath": "images/ts-05.png"
+      },
+      {
+        "pagePath": "pages/luxian/luxian",
+        "text": "路线",
+        "iconPath": "images/ts-08.png",
+        "selectedIconPath": "images/ts-06.png"
+      }
+    ]
+  }
+}

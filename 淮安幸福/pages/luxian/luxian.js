@@ -25,7 +25,7 @@ Page({
   click:function(){
 
     wx.makePhoneCall({
-      phoneNumber: '0517-83654599' //仅为示例，并非真实的电话号码
+      phoneNumber: '051783654599' //仅为示例，并非真实的电话号码
     })
   },
   /**

@@ -3,7 +3,7 @@
     <image src="../../images/ditu.png" mode="widthFix"></image>
     <text style="color:red">医院地址:河北省唐山市新华西道63号</text>
     <text  style="color:red">地理位置优越，交通方便，市区内可乘坐2路、42路、45路、56路、84路、99路到信息大厦下车。</text>
-    <text>医院免费咨询电话：400-113-0315</text>
+    <text catchtap="click">医院免费咨询电话：400-113-0315</text>
     <text>门诊时间：早8：00-晚20：00节假日不休</text>
     <text>  亲爱的朋友,为了更方便您到我院就医,我们向您推荐以下一些标准来院路线,您可以通过点击下方出行方式的按钮详细查看。我要乘坐火车请点击这里咨询我要乘坐公交请点击这里咨询我要自驾请点击这里咨询我要乘坐飞机请点击这里咨询</text>
     <text style="font-size:16pt;">唐山火车站出发:</text>

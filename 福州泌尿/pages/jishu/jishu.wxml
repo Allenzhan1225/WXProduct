@@ -1,0 +1,15 @@
+<!--jishu.wxml-->
+<!--{{wh*0.94*0.52}}-->
+
+
+<view class="bgView" >
+
+  <block wx:for="{{list}}" wx:key="hha">
+    <view class="listitem" style="margin-top:4px;margin-left:3%;margin-right:3%;width:94%;border: 1px solid rgb(226,226,226);height:44px; "   catchtap="cellClick" data-id="{{item.id}}" >
+        <text style="line-height:44px;margin-left:8px;width:85%;font-size:9pt;">{{item.title}}</text>
+     
+    </view>
+
+  </block>
+
+</view>

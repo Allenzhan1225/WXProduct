@@ -8,6 +8,13 @@ Page({
   
   },
 
+  click:function(){
+
+    wx.makePhoneCall({
+      phoneNumber: '4001130315',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

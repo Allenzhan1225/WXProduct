@@ -1,7 +1,11 @@
 
+
+
+
 <view class="swiper-tab">
   <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">男科</view>
   <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">妇科</view>
+  
 </view>
 <view class="swiper-tab-temp"></view>
 <view>
@@ -24,7 +28,7 @@
 
 
     <swiper-item style="margin-bottom:8px;" style="height:680px;">
-      <swiper autoplay="{{true}}" class="swiper-box" duration="1000" style="height:150px" indicator-dots="true"  indicator-color="white" indicator-active-color="red"  interval="2000">
+      <swiper autoplay="{{true}}" class="swiper-box" duration="1000" style="height:150px" indicator-dots="true"  indicator-color="white" indicator-active-color="red"  interval="2000" circular="true">
           <swiper-item>
             <image src="http://fuke.haxfyy.com/lib/img/fla8.jpg" style="width:100%;height:150px"></image>
           </swiper-item>

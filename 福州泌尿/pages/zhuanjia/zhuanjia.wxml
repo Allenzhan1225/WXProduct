@@ -1,0 +1,17 @@
+<!--zhuanjia.wxml-->
+<view class="bg">
+
+  <block wx:for="{{list}}" wx:key="allen">
+
+      <view class="listview"  catchtap="cellClick" data-item="{{item}}" >
+          <image src="{{item.img}}" mode="aspectFill"></image>
+          <view class="rightview">
+              <text style="margin-top:2px;font-size: 15pt;font-weight: 700;">{{item.title}}</text>
+              <text style="margin-top:10px; font-size: 10pt;">{{item.detial}}</text>
+          </view>
+      </view>
+     
+  </block>
+
+
+</view>

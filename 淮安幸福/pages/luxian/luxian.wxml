@@ -1,5 +1,15 @@
 <!--luxian.wxml-->
 <view class="bg">
+<!--<view class="contact_view">
+  
+
+</view>
+<contact-button 
+  type="default-light" 
+  size="20"
+  session-from="weapp"
+>
+我是客服</contact-button>-->
     <image src="http://www.haxfyy.com/uploads/image/20170603/20170603084218_84711.jpg" mode="widthFix"></image>
     <text >淮安幸福医院地址： <text style="color:red">淮安市淮阴区北京北路27号(市工商局旁边)</text></text>
     <text >乘坐市内公交车: <text style="color:red">12路、16路、116路车到工商局站下即可;</text></text>

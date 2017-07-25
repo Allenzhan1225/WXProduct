@@ -1,0 +1,20 @@
+<!--luxian.wxml-->
+<view class="bg">
+    <image src="../../images/yydl.jpg" mode="widthFix"></image>
+    <text style="color:red" catchtap="telclick">医院地址: <text>福州市鼓楼区湖东路155号(中山大厦正对面)</text>  </text>
+    <text style="color:red">咨询热线: <text >05910-88180000(如果不清楚路线可拨打我院免费电话咨询)</text>  </text>
+    <text style="color:red">公交线路：</text>
+    <text>公交路线一：61、70、78、100、117、121、128至观风亭站下(约300米)</text> 
+    <text>公交路线二：61、70、78、100、121、128、129至社会主义学院站下(约200米)</text> 
+    <text style="color:red" catchtap="telclick">注: <text catchtap="telclick">如有不清楚，请免费拨打0591-88180000，点击即可免费通话</text>  </text>
+    <text >福州泌尿专科医院通告</text>
+    <text >1、网络预约可享受优先就诊和绿色通道服务</text>
+    <text>2、网络预约挂号没有任何附加费用，可以免费预约挂号，所填写的资料严格保密，绝对保证患者隐私</text>
+    <text >3、我院为【医保定点单位】，您可以通过在线咨询专家或者拨打免费健康热线咨询详情。</text>
+    <text style="color:red" catchtap="telclick">温馨提示：<text catchtap="telclick">如果有不清楚的地方，可以立即拨打免费热线：0591-88180000，或者点击连线专家，我院权威专家一一指导。</text> </text>
+    
+
+
+
+   
+</view>

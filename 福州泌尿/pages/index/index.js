@@ -5,7 +5,7 @@ Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
-
+    scrWidth:0,
     
     imgUrls: [
       'http://www.fzyyzx.com/uploads/image/20170327/20170327094753_87043.jpg',
@@ -58,6 +58,15 @@ Page({
   },
   onLoad: function () {
     console.log('onLoad')
+    wx.getSystemInfo({
+      success: function(res) {
+        console.log(res);
+        this.setData({
+          scrWidth: res.screenWidth
+        });
+      },
+    })
+
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){

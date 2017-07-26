@@ -1,6 +1,6 @@
 <!--luxian.wxml-->
 <view class="bg">
-    <image src="../../images/yydl.jpg" mode="widthFix"></image>
+    <image src="../../images/yydl.jpg" mode="widthFix" style="width:100%"></image>
     <text style="color:red" catchtap="telclick">医院地址: <text>福州市鼓楼区湖东路155号(中山大厦正对面)</text>  </text>
     <text style="color:red">咨询热线: <text >05910-88180000(如果不清楚路线可拨打我院免费电话咨询)</text>  </text>
     <text style="color:red">公交线路：</text>

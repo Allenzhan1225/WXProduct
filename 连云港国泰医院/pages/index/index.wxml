@@ -3,11 +3,11 @@
 
 <view class="container" >
 <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style="width:100%;background:red">
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style="width:100%;">
   <block wx:for="{{imgUrls}}" wx:key="swiper">
-    <swiper-item style="height:150px;width:100%;background:blue;">
+    <swiper-item style="height:150px;width:100%;">
     <view class="" style="width:100%;height:100%">
-       <image src="{{item}}" style=" width:100%;"></image>  
+       <image src="{{item}}" style=" width:100%;" mode="widthFix"></image>  
     </view>
     </swiper-item>
   </block>
@@ -23,10 +23,7 @@
 
 
 <view class="" style="height:10px;width:100%"></view>
-<image src="../../images/zhyb_01.jpg" mode="widthFix" style="width:100%"></image>
-<image src="../../images/zhyb_02.jpg" mode="widthFix" style="width:100%"></image>
-<image src="../../images/zhyb_03.jpg" mode="widthFix" style="width:100%"></image>
-<image src="../../images/zhyb_04.jpg" mode="widthFix" style="width:100%"></image>
+<!---->
 
 
 <!--使用模板-->

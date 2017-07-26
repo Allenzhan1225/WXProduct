@@ -1,0 +1,27 @@
+<!--luxian.wxml-->
+<view class="bg">
+    <text style="font-size:15pt;text-align:center">连云港国泰医院乘车路线</text>
+    <image src="http://www.0518jk.com/uploads/image/20161020/20161020102559_41073.jpg" mode="widthFix" style="width:100%"></image>
+    <text style="color:red" catchtap="telclick">新浦区公交路线</text>
+
+    <text>1路、4路、8路、9路、11路、21路、22路、23路、27路公交车，火车站下车即到</text> 
+    <text>东海——市区：</text> 
+    <text>东海汽车站——长途汽车站，向西步行500米即到</text>
+
+    <text>赣榆——市区：</text> 
+    <text>赣榆汽车站——长途汽车站，向西步行500米即到</text>
+
+    <text>灌云——市区：</text> 
+    <text>灌云汽车站——汽车南站，乘坐8路公交车，火车站下车即到</text>
+
+    <text>灌南——市区：</text> 
+    <text>灌南汽车站——汽车南站，乘坐8路公交车，火车站下车即到</text>
+
+    <text style="color:red;">连云港国泰医院</text> 
+    <text>地址：连云港市新浦区人民西路5号(新浦火车站广场旁)</text>
+    <text catchtap="telclick">咨询电话：0518-85353333</text>
+
+
+
+   
+</view>

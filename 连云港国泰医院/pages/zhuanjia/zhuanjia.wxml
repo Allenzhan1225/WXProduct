@@ -1,0 +1,27 @@
+<!--zhuanjia.wxml-->
+<view class="container">
+
+<block wx:for="{{list}}" wx:key="hehhe">
+  <!-- <view class="bgView"  catchtap="cellClick" data-id="{{item.id}}" > -->
+    <template is="cell" data="{{...item}}"  ></template>
+  <!-- </view> -->
+</block>
+
+
+<view class="" style="height:10px;width:100%"></view>
+<!---->
+
+
+<!--使用模板-->
+<template name="cell" >
+  <view class="" style="margin-top:8px;"> <text style="color:{{color}};text-align:center" >{{title}}</text> </view>
+   <view class="subview">
+       <view class="subview-item" wx:for="{{detial}}" wx:for-item="listitem" wx:key="allenzhan"  bindtap="cellClick" data-id="{{listitem.id}}" data-type="{{id}}">
+          <image src="{{listitem.img}}" style="width:100%" mode="scaleToFill"></image>
+          <text style="font-size:10pt;margin-top:6px;margin-bottom:6px;" >{{listitem.name}}</text>
+       </view>
+   </view>
+</template>
+
+
+</view>

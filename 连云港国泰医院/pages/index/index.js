@@ -1,5 +1,8 @@
 //index.js
 //获取应用实例
+
+//  var ahha = require('../../utils/atil.js');
+
 var app = getApp()
 Page({
   data: {
@@ -33,19 +36,37 @@ Page({
   },
 
 
+  callBack:function(res){
+      //回调函数
+      console.log(res);
+  },
+
   //点击事件处理函数
   cellClick:function(event){
-
+    var that = this;
     var id = event.currentTarget.dataset.id
- 
+    console.log(this.callBack);
+    var func1 = this.callBack.bind(this);
+
+    // func1 = function(res){
+    //   console.log(res);
+
+    // };
+
+    var temp = { "id": 0, "type": "1", "name": "Allen", "callBack": func1.toString()};
+
+    var tempStr = JSON.stringify(temp); 
+    console.log(tempStr);
+
     wx.navigateTo({
       url: './detial/detial?id='+id,
+      //url: './detial/detial?callBack=' + tempStr,
     })
 
   },
 
-
-
+  
+  
 
   //事件处理函数
   bindViewTap: function() {
@@ -56,6 +77,12 @@ Page({
   onLoad: function () {
     console.log('onLoad')
     var that = this;
+    
+    // ahha.req(res){
+
+
+    // }
+
     wx.getSystemInfo({
       success: function(res) {
         console.log(res);
@@ -64,7 +91,7 @@ Page({
         });
       },
     })
-
+   
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
@@ -73,5 +100,10 @@ Page({
         userInfo:userInfo
       })
     })
+   
+
+    
   }
+ 
+
 })

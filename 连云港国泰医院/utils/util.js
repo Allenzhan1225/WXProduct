@@ -16,6 +16,15 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
+function callBack(res) {
+  //回调函数
+  console.log(res);
+}
+
+
 module.exports = {
   formatTime: formatTime
+}
+module.exports = {
+  req: callBack,
 }

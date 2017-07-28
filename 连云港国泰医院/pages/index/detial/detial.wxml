@@ -2,6 +2,8 @@
 <import src="../../../wxParse/wxParse.wxml"/> 
 
 <view class="">
+   <!-- <view class="" catchtap="click" >我是回调按钮</view>  -->
+
   <view class="wxParse">
     <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
   </view>

@@ -1,5 +1,7 @@
 // detial.js
 var WxParse = require('../../../wxParse/wxParse.js');
+var hahah = require('../index.js');
+
 Page({
 
   /**
@@ -7,14 +9,25 @@ Page({
    */
   data: {
     id:0,
+    callBack:null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+  console.log(options);
+
+  // console.log("options");
+  // console.log(options.callBack);
+  
+  // var temp = JSON.parse(options.callBack)
+  // console.log(typeof(temp));
+  // console.log(temp);
+ 
     this.setData({
       id: options.id,
+      // callBack: obj.callBack,
     })
 
 
@@ -137,6 +150,20 @@ Page({
     WxParse.wxParse('article', 'html', replyArr[this.data.id], that, 5); 
 
   },
+
+  //点击事件
+  click:function(){
+    console.log('我被点击了');
+    //this.data.callBack("我只是回调回来的数据");
+    // wx.navigateBack({
+    //   "url":'../index',
+    // }) 
+    console.log(typeof(hahah.req));
+    hahah.req("我只是回调回来的数据") 
+
+  },
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

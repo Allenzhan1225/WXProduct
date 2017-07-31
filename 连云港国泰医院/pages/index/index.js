@@ -74,6 +74,13 @@ Page({
       url: '../logs/logs'
     })
   },
+
+
+
+  // onShareAppMessage: function(){
+  //     return {"title":"我只是一个连接","path":'pages/index/index'}
+  // },
+
   onLoad: function () {
     console.log('onLoad')
     var that = this;

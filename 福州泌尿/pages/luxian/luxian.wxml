@@ -13,8 +13,17 @@
     <text >3、我院为【医保定点单位】，您可以通过在线咨询专家或者拨打免费健康热线咨询详情。</text>
     <text style="color:red" catchtap="telclick">温馨提示：<text catchtap="telclick">如果有不清楚的地方，可以立即拨打免费热线：0591-88180000，或者点击连线专家，我院权威专家一一指导。</text> </text>
     
+     <!-- <text class="kefu">客服</text>  -->
+    <image src="../../images/left_zx2.gif" class="img1"></image>
+    <contact-button 
+      class="kefu"
+      type="default-light" 
+      size="27"
+      session-from="weapp"
+  ></contact-button>
 
-
+  <!-- <button  open-type="contact" class="kefu">进入客服</button>
+  <button open-type="contact">进入客服会话</button> -->
 
    
 </view>

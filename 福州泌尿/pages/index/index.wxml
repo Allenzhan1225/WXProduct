@@ -3,9 +3,9 @@
 
 <view class="container" >
 <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style="width:100%;background:red">
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style="width:100%;">
   <block wx:for="{{imgUrls}}" wx:key="swiper">
-    <swiper-item style="height:150px;width:100%;background:blue;">
+    <swiper-item style="height:150px;width:100%;">
     <view class="" style="width:100%;height:100%">
        <image src="{{item}}" style=" width:100%;"></image>  
     </view>

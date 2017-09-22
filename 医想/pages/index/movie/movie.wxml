@@ -1,0 +1,15 @@
+<!--movie.wxml-->
+<view class="container">
+
+  <block wx:for="{{dataSource}}" wx:key="movie">
+      <view class="list_item" style="width:{{windowWidth}}px;" catchtap="handelClick" data-index="{{index}}">
+          <image class="img" src="{{item.img}}"></image>
+          <view class="content">
+            <view class="title">{{item.content}}</view>
+            <view class="title">{{item.content}}</view>
+            <view class="title">{{item.content}}</view>
+          </view>
+      </view> 
+  </block>
+
+</view>

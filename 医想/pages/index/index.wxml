@@ -1,0 +1,32 @@
+<!--index.wxml-->
+
+
+
+<view class="home_page">
+  <view class="home_header">
+      <view class="home_city">{{city}}</view>
+      <view class="example">
+        <view class="marquee_box">
+          <view class="marquee_text" style="{{orientation}}:{{marqueeDistance2}}px;font-size: {{size}}px;">
+             <text>{{weatherData}}</text> 
+          </view>
+        </view>
+      </view>
+  </view>
+
+   <swiper class="banner"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" duration="{{duration}}" interval="{{interval2}}">
+    <block wx:for="{{imgUrls}}" wx:key="swiper">
+      <swiper-item style="{height:100%;width:100%}">
+        <image  src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper> 
+
+  <view class="">
+    <block wx:for="{{listTitle}}" wx:key="list">
+        <view class="list_item" catchtap="bindtap" data-index="{{index}}" >{{item}}</view>
+    </block>
+  </view>
+
+
+</view>

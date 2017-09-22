@@ -1,0 +1,81 @@
+/**index.wxss**/
+.home_page{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+/* 城市名称样式 */
+.home_header {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.home_city{
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  line-height: 30px;
+  width: 100px;
+  background: #fff;
+  border-right: 1px solid #ccc;
+  box-shadow: 1px 1px 2px #ccc;
+  z-index: 100;
+}
+.home_header .weather{
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  justify-content: center;
+  flex: 1;
+  white-space: nowrap; 
+  overflow-x: scroll;
+}
+
+
+/*文字轮播样式  */
+.example {
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  justify-content: center;
+  flex: 1;
+}
+.marquee_box {
+  width: 100%;
+  position: relative;
+}
+
+.marquee_text {
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+
+/*轮播图  */
+.banner{
+  height: 150px;
+  width: 100%;
+}
+.banner image{
+  width: 100%;
+}
+
+.list_item {
+  height: 44px;
+  widows: 100%;
+  line-height: 44px;
+  font-size: 13px;
+  padding: 0 8px;
+  margin-top: 10px;
+  margin: 8px 8px;
+  border-radius: 80px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  box-shadow: 2px 3px 3px #ccc;
+  text-align: center;
+}
+

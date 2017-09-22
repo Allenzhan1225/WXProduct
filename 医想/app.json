@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/index/movie/movie",
+    "pages/index/movie/movieDetial/movieDetial"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#005AB5",
+    "navigationBarTitleText": "医想",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "backgroundColor": "#005AB5",
+    "color": "#253673",
+    "selectedColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

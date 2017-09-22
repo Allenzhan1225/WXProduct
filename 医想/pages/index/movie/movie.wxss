@@ -1,0 +1,41 @@
+/* movie.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 8px;
+  margin-bottom: 8px;
+  
+}
+
+.list_item {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  flex: 1;
+  height: 100px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 1px 1px 2px #ccc;
+  
+}
+
+.list_item  .img {
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+}
+
+.list_item .content {
+
+  margin: 10px 0;
+  flex-direction: column;
+}
+
+.title{
+  font-size: 13px;
+  margin-bottom: 8px;
+
+}

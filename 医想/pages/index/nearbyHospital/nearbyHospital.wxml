@@ -1,0 +1,16 @@
+<!--nearbyHospital.wxml-->
+<view class="container">
+  <block wx:for="{{dataSource}}" wx:key="hospital">
+    <view class="item">
+      <image src="{{item.img}}"></image>
+      <view class="content">
+        <view class="title">
+          <view class="hospitalName">{{item.name}}</view>
+          <view class="tel">电话:{{item.tel}}</view>
+        </view>
+        <view class="descript">{{item.content}}</view>
+        <view class="address">{{item.address}}</view>
+      </view>
+    </view>
+  </block>
+</view>

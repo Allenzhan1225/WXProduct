@@ -1,2 +1,20 @@
 <!--my.wxml-->
-<text>my.wxml</text>
+<view class="container">
+  <view class="header">
+    <image src="{{avatarUrl}}" class="img"></image>
+    <text>{{nickName}}</text>
+  </view>
+  <view class="content">
+    <button class="btn1" bindtap="oppointment">预约挂号</button>
+      <view class="btnbg">
+        <view class="btnbg1">
+           <button class="btn2" bindlongtap="myQuestion">我的问题</button>
+        </view>
+        <view class="btnbg2">
+            <button class="btn3" bindtap="myConsult">我的咨询</button>
+        </view>
+      </view>
+    <button class="btn4" bindtap="myOppointment">我的预约</button>
+  </view>
+</view>
+

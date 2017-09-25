@@ -1,0 +1,3 @@
+<!--hotQuestion.wxml-->
+<view class="btn" bindlongtap="luyin">录音</view>
+<view class="btn" bindlongtap="bofang">播放</view>

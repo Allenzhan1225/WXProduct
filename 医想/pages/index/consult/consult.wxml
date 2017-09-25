@@ -1,0 +1,23 @@
+<!--consult.wxml-->
+<view class="container">
+
+  <view class="symphony">
+    <text>性功能常见的症状:</text>
+    <view class="labels">
+      <block wx:for="{{labels}}" wx:key="label"> 
+         <view bindtap="itemClick" data-index="{{index}}" data-status="{{item.status}}" class="item" style="background:{{item.status == false? 'white' : 'rgb(30, 121, 184)'}};color:{{item.status == false? 'black' : 'white'}}">{{item.title}}</view>
+      </block>
+     
+    </view>
+  </view>
+
+  <view class="question">
+    <view class="bg">
+        <textarea bindinput="bindTextChange" bindblur="textBlur" maxlength="-1" class="textArea" placeholder-class="placeCss" placeholder="请输入您的具体症状" auto-height="false"/>
+    </view>
+  </view>
+
+  <view class="submit" bindtap="submit">提交</view>
+
+
+</view>

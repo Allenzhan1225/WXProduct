@@ -192,18 +192,28 @@ Page({
     console.log(index);
     switch(index){
       case 0:
+      //快速问答
+        wx.navigateTo({
+          url: './consult/consult',
+        }) 
       break;
       case 1:
+        //热门问题
+        wx.navigateTo({
+          url: './hotQuestion/hotQuestion',
+        }) 
         break;
       case 2:
+      // 最新视频
         wx.navigateTo({
           url: './movie/movie',
         }) 
         break;
       case 3:
+        //附近医院
         wx.navigateTo({
-          url: './movie/movie',
-        })  
+          url: './nearbyHospital/nearbyHospital',
+        }) 
         break;
       default:
         break;

@@ -4,18 +4,25 @@
     "pages/logs/logs",
     "pages/my/my",
     "pages/index/movie/movie",
-    "pages/index/movie/movieDetial/movieDetial"
+    "pages/index/movie/movieDetial/movieDetial",
+    "pages/my/oppointment/oppointment",
+    "pages/my/myOppointment/myOppointment",
+    "pages/my/myQuestion/myQuestion",
+    "pages/my/myConsult/myConsult",
+    "pages/index/consult/consult",
+    "pages/index/hotQuestion/hotQuestion",
+    "pages/index/nearbyHospital/nearbyHospital"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#005AB5",
+    "navigationBarBackgroundColor": "#3B3B3B",
     "navigationBarTitleText": "医想",
     "navigationBarTextStyle": "#fff"
   },
   "tabBar": {
-    "backgroundColor": "#005AB5",
-    "color": "#253673",
-    "selectedColor": "#fff",
+    "backgroundColor": "#fff",
+    "color": "#CCC",
+    "selectedColor": "#000",
     "list": [
       {
         "pagePath": "pages/index/index",

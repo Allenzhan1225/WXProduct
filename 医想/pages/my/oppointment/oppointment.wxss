@@ -1,0 +1,15 @@
+/* oppointment.wxss */
+page{
+  height: 100%;
+}
+.contianer{
+  display: flex;
+  flex:1;
+  
+}
+
+.item{
+  display: flex;
+  height: 44px;
+  flex-direction: row;
+}

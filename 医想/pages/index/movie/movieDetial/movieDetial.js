@@ -1,7 +1,7 @@
 // movieDetial.js
-
+var WxParse = require('../../../../wxParse/wxParse.js')
 var util = require('../../../../utils/util.js')
-
+var app = getApp();
 Page({
 
   /**
@@ -9,14 +9,16 @@ Page({
    */
   data: {
     autoplay:false,
+    apiHost:app.func.apiHost
   },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
 
+      const that = this;
       const url = options.url;
       console.log(util.windowinfo());
       this.setData({
@@ -24,6 +26,21 @@ Page({
         height: util.windowinfo().screenWidth,
         width: util.windowinfo().screenHeight,
       })
+     
+  //     var voideHTML = `<video width=${this.data.width} height=${this.data.height} controls autoplay>
+  // <source src= "${this.data.apiHost}/Public/upload/re_shipin/${this.data.url}" type= "video/ogg" >
+  // <object data="${this.data.apiHost}/Public/upload/re_shipin/${this.data.url}" width= ${this.data.width}  height= ${this.data.height} >
+  // <embed width=${this.data.width}  height= ${this.data.height} src= "${this.data.apiHost}/Public/upload/re_shipin/${this.data.url}" >
+  // </object>
+  // </video>`;
+      var videoStr = this.data.apiHost+'/Public/upload/re_shipin/'+this.data.url;
+      // console.error(videoStr);
+  // http://yxtest.xgyuanda.com/Public/upload/re_shipin/trailer.mp4
+      var voideHTML1 = `<video src=${videoStr} width="320" height="240" controls="controls">
+
+</video>`;
+      WxParse.wxParse('voideHTML', 'html', voideHTML1, that, 5); 
+
   },
 
   /**
@@ -32,6 +49,10 @@ Page({
   onReady: function () {
 
   },
+  // function name(){},
+//  error:function(e){
+//     console.log('e.detail.errMsg=',e.detail.errMsg);
+//   },
 
   /**
    * 生命周期函数--监听页面显示

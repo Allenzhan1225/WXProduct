@@ -1,0 +1,5 @@
+<!--oppointStatus.wxml-->
+<view class="container">
+  <image src="../../../../images/succeed.png"></image>
+  <view class="btn" catchtap="submit">查看预约</view>
+</view>

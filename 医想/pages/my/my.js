@@ -9,6 +9,7 @@ Page({
   data: {
     avatarUrl:'',
     nickName:'',
+    apiHost:app.func.apiHost
   },
 
   /**

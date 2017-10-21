@@ -8,7 +8,7 @@ Page({
     city:'',  
     hasLocation:false,//是否获取到定位信息
     weatherData:'',//天气信息
-
+    apiHost:app.func.apiHost,
     text: '这是一条会滚动的文字滚来滚去的文字跑马灯，哈哈哈哈哈哈哈哈',
     marqueePace: 1,//滚动速度
     marqueeDistance: 0,//初始滚动距离
@@ -25,11 +25,7 @@ Page({
       '附近医院'
     ],
 
-    imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-    ],
+    imgUrls: [],
     indicatorDots: true,//是否显示小圆点
     autoplay: true, //是否自动播放
     interval2: 3000,//动画间隔
@@ -50,11 +46,22 @@ Page({
       url: '../logs/logs'
     })
   },
-
+  // 获取轮播数据
+  loadData(){
+    var that = this;
+    app.func.reqGet('Api/index',function(res){
+      console.log(res);
+      that.setData({
+          imgUrls:res,
+      })
+    })
+  },
 
   onLoad: function () {
     console.log('onLoad')
     var that = this
+
+    this.loadData();
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
       //更新数据
@@ -75,7 +82,7 @@ Page({
         //获取当前城市名称
         that.getCurrentCity(latitude,longitude);
         //获取天气
-        that.getTodayWeather();
+        that.getTodayWeather(latitude, longitude);
       }
     })
   },
@@ -91,6 +98,7 @@ Page({
         console.log(res);
         var city=res.data.result.addressComponent.city; 
         console.log(city);
+        wx.setStorageSync("currentCity", city);
         that.setData({city:city}); 
       },
       fail: function() { 
@@ -102,30 +110,71 @@ Page({
                   
      })
   },
-  // 获取天气
-  getTodayWeather(){
+
+  getTodayWeather(lat, long){
     var that = this;
-    // 新建百度地图对象 
-    var BMap = new bmap.BMapWX({
-      ak: 'It8Tspe1qUkvqAYmDbtAe2d66zGXUimc'
-    });
-    var fail = function (data) {
-      console.log(data)
-    };
-    var success = function (data) {
-      var weatherData = data.currentWeather[0];
-      weatherData = 'PM2.5：' + weatherData.pm25 + '日期：' + weatherData.date +  '温度：' + weatherData.temperature +  '天气：' + weatherData.weatherDesc +  '风力：' + weatherData.wind + '\n';
-      that.setData({
-        weatherData: weatherData
-      });
-     
-    }
-    // 发起weather请求 
-    BMap.weather({
-      fail: fail,
-      success: success
-    }); 
+    wx.request({
+      url: 'https://api.map.baidu.com/telematics/v3/weather?ak=It8Tspe1qUkvqAYmDbtAe2d66zGXUimc&location=' + long + ',' + lat + '&output=json',
+      data: {},
+      header: { 'Content-Type': 'application/json' },
+      success: function (data) {
+        let res = data["data"];
+
+        console.log("天气信息");
+        console.log(res);
+        let weatherArr = res["results"];
+        let  weatherData = {
+          currentCity: weatherArr[0]["currentCity"],
+          pm25: weatherArr[0]["pm25"],
+          date: weatherArr[0]["weather_data"][0]["date"],
+          temperature: weatherArr[0]["weather_data"][0]["temperature"],
+          weatherDesc: weatherArr[0]["weather_data"][0]["weather"],
+          wind: weatherArr[0]["weather_data"][0]["wind"]
+        };
+
+
+        weatherData = 'PM2.5：' + weatherData.pm25 + '日期：' + weatherData.date + '温度：' + weatherData.temperature + '天气：' + weatherData.weatherDesc + '风力：' + weatherData.wind + '\n';
+        that.setData({
+          weatherData: weatherData
+        });
+        console.log("天气数据是%s", weatherData);
+        
+      },
+      fail: function () {
+        // fail 
+      },
+      complete: function () {
+        // complete
+      }
+    })
   },
+  // 获取天气
+  // getTodayWeather(){
+  //   var that = this;
+  //   // 新建百度地图对象 
+  //   var BMap = new bmap.BMapWX({
+  //     ak: 'It8Tspe1qUkvqAYmDbtAe2d66zGXUimc'
+  //   });
+  //   var fail = function (data) {
+  //     console.log("获取天气信息失败：");
+  //     console.log(data);
+  //   };
+  //   var success = function (data) {
+      
+  //     var weatherData = data.currentWeather[0];
+  //     weatherData = 'PM2.5：' + weatherData.pm25 + '日期：' + weatherData.date +  '温度：' + weatherData.temperature +  '天气：' + weatherData.weatherDesc +  '风力：' + weatherData.wind + '\n';
+  //     that.setData({
+  //       weatherData: weatherData
+  //     });
+  //     console.log("天气数据是%s",weatherData);
+     
+  //   }
+  //   // 发起weather请求 
+  //   BMap.weather({
+  //     fail: fail,
+  //     success: success
+  //   }); 
+  // },
 
 
   onShow: function () {
@@ -191,25 +240,25 @@ Page({
     const index = e.currentTarget.dataset.index;
     console.log(index);
     switch(index){
-      case 0:
+      case '0':
       //快速问答
         wx.navigateTo({
           url: './consult/consult',
         }) 
       break;
-      case 1:
+      case '1':
         //热门问题
         wx.navigateTo({
           url: './hotQuestion/hotQuestion',
         }) 
         break;
-      case 2:
+      case '2':
       // 最新视频
         wx.navigateTo({
           url: './movie/movie',
         }) 
         break;
-      case 3:
+      case '3':
         //附近医院
         wx.navigateTo({
           url: './nearbyHospital/nearbyHospital',

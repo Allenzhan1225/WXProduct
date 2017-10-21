@@ -1,3 +1,26 @@
 <!--hotQuestion.wxml-->
-<view class="btn" bindlongtap="luyin">录音</view>
-<view class="btn" bindlongtap="bofang">播放</view>
+
+<!--oppointment.wxml-->
+<view class="container">
+  <block wx:for="{{dataSource}}" wx:key="question">
+    <view class="item" bindtap="handleClick" data-id="{{item.id}}">
+        <view class="header">
+          <image src="{{item.u_image}}"></image>
+          <view class="name">{{item.weixin_name}}</view>
+          <view class="time">{{item.z_time}}</view>       
+        </view>
+        <view class="content">
+          {{item.content}}
+        </view>
+        <view class="footer">
+          <image src="{{apiHost}}/Public/upload/fzml/{{item.d_images}}"></image>
+          <view class="text">{{item.d_id == 0? "未回答":'已回答' }}</view>
+        </view>
+    </view>
+  
+  </block>
+</view>
+
+
+<!-- <view class="btn" bindlongtap="luyin">录音</view>
+<view class="btn" bindlongtap="bofang">播放</view> -->

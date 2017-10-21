@@ -1,0 +1,7 @@
+<!--reply.wxml-->
+<view class="reply">
+  <view class="section">
+    <textarea class="text" bindblur="bindTextAreaBlur" bindinput='textinput' auto-height placeholder="输入您的回复内容"  value="{{content}}"/>
+  </view>
+  <view class="btn" bindtap="reply">提交</view>
+</view>

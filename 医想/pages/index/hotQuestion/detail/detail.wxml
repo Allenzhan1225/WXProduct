@@ -1,0 +1,54 @@
+<!--detail.wxml-->
+<view class="container">
+    <view class="item">
+        <view class="header">
+          <image src="{{dataSource.abja.u_image}}"></image>
+          <view class="name">{{dataSource.abja.weixin_name}}</view>
+          <view class="time">{{dataSource.abja.z_time}}</view>       
+        </view>
+        <view class="content">
+         {{dataSource.abja.content}}
+        </view>   
+    </view>
+    <view class="answer">回答</view>
+     <block wx:if="{{dataSource.abjb.length > 0 }}" wx:key="reply"> 
+      <view class="reply">
+        <view class="header">
+          <image src="{{apiHost}}/Public/upload/fzml/{{dataSource.abjb[0].d_images}}"></image>
+          <view class="name">{{dataSource.abjb[0].d_doctor}}</view>
+          <view class="time">{{dataSource.abjb[0].d_time}}</view>   
+          <view class="inset"></view>
+          <view class="huifu" catchtap="reply" data-id="{{dataSource.abja.id}}">回复</view>    
+        </view>
+          <view class="content" wx:if="{{dataSource.abjb[0].doc_statu == 0}}">
+              {{dataSource.abjb[0].d_content}}
+            </view> 
+            <!--http://yxtest.xgyuanda.com/Public/upload/re_yuyin/{{dataSource.abjb[0].d_content}}  -->
+            <view class='content' wx:if="{{dataSource.abjb[0].doc_statu == 1}}">
+              <audio class='audio_detail'  name="医生" author="回复" src="{{apiHost}}/Public/upload/re_yuyin/{{dataSource.abjb[0].d_content}}" id="{{dataSource.abjb[0].id}}" controls bindplay="play" data-id='{{dataSource.abjb[0].id}}' ></audio>
+            </view>
+        <!-- <view class="content">
+             {{dataSource.abjb[0].d_content}}
+        </view>  -->
+        <block wx:for="{{dataSource.abjc}}" wx:key="detail">
+          <view class="answerReply">
+             <view class="header">
+              <image src="{{item.z_time != ''? item.u_image:item.d_images}}"></image>
+              <view class="name">{{item.z_time != ''? item.weixin_name:item.d_doctor}}</view>
+              <view class="time">{{item.z_time != ''? item.z_time:item.d_time}}</view> 
+              <view class="inset"></view>
+              <view class="huifu" catchtap="reply" data-id="{{dataSource.abja.id}}">{{item.z_time != ''? "":"回复"}}</view>         
+            </view>
+            <view class="content" wx:if="{{item.doc_statu == 0}}">
+              {{item.z_time != ''? item.content:item.d_content}}
+            </view> 
+            
+            <view class='content' wx:if="{{item.doc_statu == 1}}">
+              <audio class='audio_detail'  name="医生" author="回复" src="{{apiHost}}/Public/upload/re_yuyin/{{item.d_content}}" id="{{item.id}}" controls bindplay="play" data-id='{{item.id}}' ></audio>
+            </view>
+          </view>
+        </block>
+      </view>
+     </block> 
+
+</view>

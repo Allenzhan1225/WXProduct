@@ -1,90 +1,57 @@
+
 // nearbyHospital.js
+var app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      dataSource:[
-        {
-          id:'0',
-          img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-          name:'唐山现代医院男科专科医院',
-          tel:'18720933632',
-          content:'这家医院非常好，服务态度一流，卫生环境一流，杰克丹尼萨克拉到那第三第三离开的',
-          address:'上海市长宁区中山西路333号，靠近中山公园'
-        },
-        {
-          id: '1',
-          img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', 
-          name: '唐山现代医院男科专科医院',
-          tel: '18720933632',
-          content: '这家医院非常好，服务态度一流，卫生环境一流，杰克丹尼萨克拉到那第三第三离开的',
-          address: '上海市长宁区中山西路333号，靠近中山公园'
-        },
-        {
-          id: '2',
-          img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', 
-          name: '唐山现代医院男科专科医院',
-          tel: '18720933632',
-          content: '这家医院非常好，服务态度一流，卫生环境一流，杰克丹尼萨克拉到那第三第三离开的',
-          address: '上海市长宁区中山西路333号，靠近中山公园'
-        },
-        {
-          id: '3',
-          img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', 
-          name: '唐山现代医院男科专科医院',
-          tel: '18720933632',
-          content: '这家医院非常好，服务态度一流，卫生环境一流，杰克丹尼萨克拉到那第三第三离开的',
-          address: '上海市长宁区中山西路333号，靠近中山公园'
-        },
-        {
-          id: '4',
-          img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', 
-          name: '唐山现代医院男科专科医院',
-          tel: '400-113-0315',
-          content: '这家医院非常好，服务态度一流，卫生环境一流，杰克丹尼萨克拉到那第三第三离开的',
-          address: '上海市长宁区中山西路333号，靠近中山公园'
-        },
-        {
-          id: '5',
-          img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', 
-          name: '唐山现代医院男科专科医院',
-          tel: '18720933632',
-          content: '这家医院非常好，服务态度一流，卫生环境一流，杰克丹尼萨克拉到那第三第三离开的',
-          address: '上海市长宁区中山西路333号，靠近中山公园'
-        },
-        {
-          id: '6',
-          img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', 
-          name: '唐山现代医院男科专科医院',
-          tel: '18720933632',
-          content: '这家医院非常好，服务态度一流，卫生环境一流，杰克丹尼萨克拉到那第三第三离开的',
-          address: '上海市长宁区中山西路333号，靠近中山公园'
-        },
-        {
-          id: '7',
-          img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-          name: '唐山现代医院男科专科医院',
-          tel: '18720933632',
-          content: '这家医院非常好，服务态度一流，卫生环境一流，杰克丹尼萨克拉到那第三第三离开的',
-          address: '上海市长宁区中山西路333号，靠近中山公园'
-        }, {
-          id: '8',
-          img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-          name: '唐山现代医院男科专科医院',
-          tel: '18720933632',
-          content: '这家医院非常好，服务态度一流，卫生环境一流，杰克丹尼萨克拉到那第三第三离开的',
-          address: '上海市长宁区中山西路333号，靠近中山公园'
-        }
-      ],
+      dataSource:[],
+      isHasHospital:true,
+      apiHost:app.func.apiHost
+        
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    //获取当前的城市
+    const city = wx.getStorageSync('currentCity');
+    this.loadData(city);
+  },
+
+  // 获取附近的医院
+  loadData(city){
+    const that = this;
+    app.func.reqGet('Api/index/hospital_yx?j_address='+city,function(res){
+      console.log(res);
+      if(res.status  == 0){
+        that.setData({
+          isHasHospital:false,
+        })
+      }
+      that.setData({
+        dataSource:res.hosptal,
+      })
+      
+
+    })
+  },
+
+
+
+
+  // 点击进入详情
+  click(e){
+    const id = e.currentTarget.dataset.id;
+    console.log("id");
+    console.log(id);
+    wx.navigateTo({
+      url: './detail/detail?id='+id,
+    })
   },
 
   /**

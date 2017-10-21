@@ -1,2 +1,19 @@
 <!--oppointment.wxml-->
-<text>oppointment.wxml</text>
+<view class="container">
+  <block wx:for="{{dataSource}}" wx:key="question">
+    <view class="item">
+        <view class="header">
+          <image src="{{item.u_image}}"></image>
+          <view class="name">{{item.weixin_name}}</view>
+          <view class="time">{{item.z_time}}</view>       
+        </view>
+        <view class="content">
+         {{item.content}}
+        </view>
+        <view class="footer">
+          <text bindtap="reply" data-id="{{item.id}}">回复情况</text>
+        </view>
+    </view>
+  
+  </block>
+</view>

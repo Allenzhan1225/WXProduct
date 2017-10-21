@@ -1,0 +1,25 @@
+/* oppointStatus.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+image{
+  height: 240px;
+  width: 277px;
+}
+.btn{
+  width: 80%;
+  color: #fff;
+  background: rgb(30, 121, 184);
+  border-radius: 8px;
+  height: 40px;
+  margin-top: 20px;
+  line-height: 40px;
+  font-size: 15px;
+  text-align: center;
+}

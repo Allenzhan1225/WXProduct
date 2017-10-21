@@ -1,2 +1,19 @@
 <!--oppointment.wxml-->
-<text>oppointment.wxml</text>
+<view class="container1">
+    <block wx:for="{{dataSource}}" wx:key="oppoint">
+        <view class="item">
+            <view class="content">
+              <view class="header">
+                <view class="name">{{item.hosptal}}</view>
+                <view class="tel">电话:{{item.h_tel}}</view>
+              </view>  
+              <view class="discript">{{item.h_about}}</view>
+              <view class="time">预约时间:{{item.y_time}}</view>
+            </view>
+            <view class="btn" catchtap="cancelOrder" data-id="{{item.id}}">
+              <view class="btn_cont1" >取消</view>
+              <view class="btn_cont2" >预约</view>
+            </view>
+        </view>
+    </block>
+</view>

@@ -1,4 +1,6 @@
 // movie.js
+
+var app = getApp();
 Page({
 
   /**
@@ -19,14 +21,15 @@ Page({
       { 'id': 9, 'img': 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', 'content': '这是一部电影', 'url': 'https://media.w3.org/2010/05/sintel/trailer.mp4' },
       { 'id': 10, 'img': 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', 'content': '这是一部电影', 'url': 'https://media.w3.org/2010/05/sintel/trailer.mp4' },
 
-    ]
+    ],
+    apiHost:app.func.apiHost
   },
 
 
 
   handelClick(e){
-      const index = e.currentTarget.dataset.index;
-      const url = this.data.dataSource[index].url;
+      const url = e.currentTarget.dataset.url;
+      // const url = this.data.dataSource[index].url;
       wx.navigateTo({
         url: './movieDetial/movieDetial?url='+url,
       })
@@ -40,7 +43,21 @@ Page({
     this.setData({
       windowWidth: windowWidth - 16,
     })
+   this.loadData()
+
+
   },
+
+//加载视频数据
+  loadData(){
+    const that = this;
+    app.func.reqGet('Api/index/shi_pin',function(res){
+        that.setData({
+          dataSource:res,
+        })
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

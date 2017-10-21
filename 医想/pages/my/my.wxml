@@ -1,20 +1,237 @@
 <!--my.wxml-->
-<view class="container">
+<view class="container1">
   <view class="header">
     <image src="{{avatarUrl}}" class="img"></image>
     <text>{{nickName}}</text>
   </view>
-  <view class="content">
+  <!-- <view class="content">
     <button class="btn1" bindtap="oppointment">预约挂号</button>
       <view class="btnbg">
         <view class="btnbg1">
-           <button class="btn2" bindlongtap="myQuestion">我的问题</button>
+           <button class="btn2" bindtap="myQuestion">我的问题</button>
         </view>
         <view class="btnbg2">
             <button class="btn3" bindtap="myConsult">我的咨询</button>
         </view>
       </view>
     <button class="btn4" bindtap="myOppointment">我的预约</button>
-  </view>
+  </view> -->
+
+    <!-- <view class="userlist">
+      <view class="userlist_li" bindtap="oppointment">
+        <image src="../../images/医想小程序_03.png" style="height:25px;width:25px;"></image>
+        <text class="iconfont icon-all"> </text> 预约挂号<text class="iconfont icon-more iconmores"></text>
+      </view>
+      <view class="userlist_li">
+        <image src="../../images/医想小程序_03.png" style="height:25px;width:25px;"></image>
+        <text class="iconfont icon-all"> </text> 我的问题<text class="iconfont icon-more iconmores"></text>
+      </view>
+      <view class="userlist_li">
+        <image src="../../images/医想小程序_03.png" style="height:25px;width:25px;"></image>
+        <text class="iconfont icon-all"> </text> 我的咨询<text class="iconfont icon-more iconmores"></text>
+      </view>
+      <view class="userlist_li">
+        <image src="../../images/医想小程序_03.png" style="height:25px;width:25px;"></image>
+        <text class="iconfont icon-all"> </text> 我的预约<text class="iconfont icon-more iconmores"></text>
+      </view>
+    </view> -->
+    <view class="item blod" bindtap="oppointment">
+        <image src="../../images/icon_03.png" style="height:25px;width:25px;"></image>
+        <view class="title">预约挂号</view>
+        <view class="img"> > </view>
+     
+    </view>
+    <view class="item" bindtap="myQuestion">
+        <image src="../../images/icon_06.png" style="height:25px;width:25px;"></image>
+        <view class="title">我的问题</view>
+        <view class="img"> > </view>
+
+    </view>
+    <!--bindtap="myConsult"   -->
+    <view class="item blod" >
+        <image src="../../images/icon_08.png" style="height:25px;width:25px;"></image>
+        <view class="title">我的咨询</view>
+        <view class="img"> > </view>
+         <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:20px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:40px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:60px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:80px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:100px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-light" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:120px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-light" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:140px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-light" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:160px'
+          >
+         </contact-button >
+           <contact-button 
+            type="default-light" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:180px'
+          >
+         </contact-button >
+         
+           <contact-button 
+            type="default-light" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:200px'
+          >
+         </contact-button >
+           <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:220px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:240px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:260px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:280px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:300px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-light" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:320px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-light" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:340px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-light" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:360px'
+          >
+         </contact-button >
+           <contact-button 
+            type="default-light" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:380px'
+          >
+         </contact-button >
+         
+           <contact-button 
+            type="default-light" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:400px'
+          >
+         </contact-button >
+             <contact-button 
+            type="default-light" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:420px'
+          >
+         </contact-button >
+         
+    </view>
+    
+  
+    <view class="item" bindtap="myOppointment">
+        <image src="../../images/icon_10.png" style="height:25px;width:25px;"></image>
+        <view class="title">我的预约</view>
+        <view class="img"> > </view>
+     
+    </view>
+  
 </view>
 

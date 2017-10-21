@@ -1,8 +1,28 @@
 <!--nearbyHospital.wxml-->
-<view class="container">
+<view class="container1">
+ 
+  <block wx:if="{{isHasHospital == false}}">
+    <text style=' color: orange;'>当前城市没有医院,下面为您列出所有的医院</text>
+  </block>
+
   <block wx:for="{{dataSource}}" wx:key="hospital">
-    <view class="item">
-      <image src="{{item.img}}"></image>
+    <view class="item" catchtap="click" data-id="{{item.id}}">
+      <image src="{{apiHost}}/Public/upload/fzml/{{item.image}}"></image>
+      <view class="content">
+        <view class="title">
+          <view class="hospitalName">{{item.hosptal}}</view>
+          <view class="tel">电话:{{item.h_tel}}</view>
+        </view>
+        <view class="descript">{{item.h_about}}</view>
+        <view class="address">地址:{{item.address}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!--
+
+  <image src="{{item.img}}"></image>
       <view class="content">
         <view class="title">
           <view class="hospitalName">{{item.name}}</view>
@@ -11,6 +31,5 @@
         <view class="descript">{{item.content}}</view>
         <view class="address">{{item.address}}</view>
       </view>
-    </view>
-  </block>
-</view>
+
+  -->

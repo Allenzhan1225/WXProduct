@@ -1,18 +1,51 @@
 // oppointment.js
+
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    title:'取消\n预约',
+    dataSource:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+      this.loadData();
+  },
+
+  // 预约列表数据
+  loadData(){
+    var that = this;
+    const id = wx.getStorageSync('user_id');
+    app.func.reqGet('Api/index/order_me?id='+id,function(res){
+      console.log(res);
+      that.setData({
+        dataSource:res
+      })
+    })
+
+  },
+
+
+  //取消预约
+  cancelOrder(e){
+    var that = this;
+    const id = e.currentTarget.dataset.id;
+
+    app.func.reqGet('Api/index/order_qx?id='+id,function(res){
+      console.log(res);
+      wx.showToast({
+        title: res,
+        duration: 1500
+      })
+      that.loadData();
+    })
+
   },
 
   /**

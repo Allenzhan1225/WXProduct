@@ -16,8 +16,6 @@ page{
   justify-content: flex-start;
 }
 
-
-
 .symphony{
   display: flex;
   flex-direction: column;
@@ -35,11 +33,11 @@ page{
 }
 .labels .item{
 
-  padding: 5px 8px;
+  padding: 3px 8px;
   border: 1px solid #ccc;
   background: #fff;
   border-radius: 6px;
-  margin: 8px 8px;
+  margin: 5px 8px;
   height: 30px;
   line-height: 30px;
 
@@ -54,12 +52,13 @@ page{
   border-top: 1px solid rgb(241,241,241);
   border-bottom: 1px solid rgb(241,241,241);
   padding: 0px 10px; 
+  overflow-y: scroll;
 }
 .bg{
   display: flex;
   flex: 1;
   margin-top: 10px;
-  height: 130px;
+  /* height: 130px; */
   width: 100%;
   border: 1px solid #ccc;
   overflow-y: scroll;

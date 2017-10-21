@@ -1,4 +1,6 @@
 // consult.js
+
+var app = getApp();
 Page({
 
   /**
@@ -7,16 +9,7 @@ Page({
   data: {
       content:'',
       selectedItems:[],
-      labels:[
-        {id:'0',title:'勃起不够硬',status:false},
-        { id: '1', title: '时间短', status: false },
-        { id: '2', title: '勃起硬', status: false },
-        { id: '3', title: '勃起不够硬', status: true },
-        { id: '4', title: '勃够硬', status: false },
-        { id: '5', title: '勃起不够硬', status: false },
-        { id: '6', title: '勃够dsa 硬', status: false },
-        { id: '7', title: '勃起硬fafdas ', status: false },
-      ]
+      labels:[]
 
   },
 
@@ -24,8 +17,30 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+      this.loadData();
   },
+
+  // 加载症状
+  loadData(){
+    var that = this;
+   
+    app.func.reqGet('Api/index/zheng_zhuang',function(res){
+      console.log(res);
+      for(var i = 0 ; i < res.length; ++i){
+        res[i].status = false;
+      }
+      const labels = res;
+      console.log(res);
+      that.setData({
+        labels
+      })
+    }) 
+
+
+  },
+
+
+
   // 输入框失去焦点
   textBlur(e){
     const content = e.detail.value;
@@ -62,11 +77,32 @@ Page({
 
   // 提交问答
   submit(){
+    var that = this;
     //1.获取当前选中的标签
     this.selectedItems();
     console.log(this.data.selectedItems);
     const content = this.data.content;
     console.log(content);
+
+    
+    const id = wx.getStorageSync('user_id');
+    console.log('用户id');
+    console.log(id);
+    const selectedStr = this.data.selectedItems.join(',');
+    app.func.reqGet('Api/index/ks_wenda?uid='+id+'&sid='+selectedStr+'&content='+content,function(res){
+      console.log(res);
+      if(res.status != 200){
+        wx.showToast({
+          title: res.msg,
+          duration: 1500,
+          complete:function(){
+            wx.navigateBack({
+              delta: 1,
+            })
+          }
+        })
+      }
+    })
 
   },
 

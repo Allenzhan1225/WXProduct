@@ -1,13 +1,17 @@
 <!--movie.wxml-->
+
 <view class="container">
 
   <block wx:for="{{dataSource}}" wx:key="movie">
-      <view class="list_item" style="width:{{windowWidth}}px;" catchtap="handelClick" data-index="{{index}}">
-          <image class="img" src="{{item.img}}"></image>
+      <view class="list_item"  catchtap="handelClick" data-url="{{item.mp_url}}">
+          <image class="img" src="{{apiHost}}/Public/upload/re_shipin/images/{{item.mp_image}}"></image>
           <view class="content">
-            <view class="title">{{item.content}}</view>
-            <view class="title">{{item.content}}</view>
-            <view class="title">{{item.content}}</view>
+            <view class="title">
+              <view class="name">{{item.mp_name}}</view>
+              <view class="date">{{item.mp_time}}</view>
+            </view>
+            <view class="disc">简介:{{item.mp_jianjie}}</view>
+           
           </view>
       </view> 
   </block>

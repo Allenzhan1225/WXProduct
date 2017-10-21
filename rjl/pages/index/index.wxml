@@ -1,0 +1,194 @@
+<!--index.wxml-->
+<view class="container">
+
+
+<audio id='myaudio' scr='http://yxtest.xgyuanda.com/Public/upload/re_yuyin/2017-10-13/59e02d760225f.mp3' controls name='医生' author='回复'></audio>
+
+
+   <swiper class="banner"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" duration="{{duration}}" interval="{{interval2}}">
+    <block wx:for="{{imgUrls}}" wx:key="swiper">
+        <swiper-item style="{height:100%;width:100%}">
+        <image  src="{{item}}"></image>
+        </swiper-item>
+        </block>
+  </swiper>
+
+  <!-- -1 -->
+  <text class='title'> Become an Language Partner and</text>
+  <text class='title'>  have a live-in solution for your time in China!</text>
+  <text class='content'>  Would you like to gain first-hand insights into China? </text>
+  <text class='content'>  Submerge yourself in the language and culture with the help of a host family?</text>
+  <text class='content'>   Make friends for life and improve your CV? Then why not become a Language Partner?</text>
+
+  <image src='http://www.51yuban.net/img/1_1.jpg'></image>
+
+
+<!-- 0 -->
+  <text class='title'> What is Language Partner?</text>
+  <text class='content'>  Language partnering solution is an opportunity for young adults around the globe to live </text>
+  <text class='content'> with a host family of their choosing to experience the Chinese culture and learn language, while tutoring English or your first language for family members, in most cases the family’s children. </text>
+
+<view class='imgs'>
+  <image src='http://www.51yuban.net/img/21_1.jpg'></image>
+  <image src='http://www.51yuban.net/img/21_2.jpg'></image>
+  <image src='http://www.51yuban.net/img/21_3.jpg'></image>
+</view>
+
+ <text class='content'>  As an LP, you will become part of the family as a sibling, role model, best friend and valuable member of the family for a minimum three months with the option to extend to one year and more. </text>
+
+<!-- 1-->
+
+<text class='title'> The LP experience – are you ready for an adventure?</text>
+ <text class='content'>  You’re about to finish some phase of your studies or work, and the questions begin:  </text>
+  <text class='content'> What shall I do now?  </text>
+
+  <view class='attr'>
+    <image src='http://www.51yuban.net/img/8_1.jpg'></image>
+    <view class='discript'>
+     <text class='content'> Spend more time in school or university – but where? Find a job – but doing what? Maybe it’s simply not so clear to you yet what you’d like to do next. Maybe what you’d like best of all is first to see what is out there, to have some adventures, to discover your independence. Here is an idea for you: Become a Language Partner! Go ahead give it a try! </text>
+    </view>
+  </view>
+
+
+<!-- 2-->
+  <text class='title'> A once-in-a-lifetime experience</text>
+ <text class='content'>  What makes being an LP an unforgettable experience? Having the chance to learn another language, </text>
+  <text class='content'> gain first-hand insight of the Orient and being able to count on a second family; same goes with our host family </text>
+
+  <view class='attr'>
+    <image src='http://www.51yuban.net/img/11_1.jpg'></image>
+    <image src='http://www.51yuban.net/img/11_2.jpg'></image>
+  </view>
+
+
+<!-- 3 -->
+  <text class='title'> How our program works:</text>
+ <text class='content'>  What makes being an LP an unforgettable experience? Having the chance to learn another language, </text>
+  <text class='content'> gain first-hand insight of the Orient and being able to count on a second family; same goes with our host family </text>
+
+  <view class='attr'>
+    <view class='discript'>
+     <text class='content'> Successful candidates will not only receiving free accommodation and other perks of being a LP, but also open to our comprehensive assistance including but not limited to job seeking, starting up your business, Chinese working permit, tax, medical care and overseas insurances etc.  </text>
+    </view>
+    <image src='http://www.51yuban.net/img/12_1.jpg'></image>
+  </view>
+
+<!-- 4 -->
+   <text class='title'> Job seeking – with our help, it’s easier than you think </text>
+
+<text class='content'>According to a recent research, China is becoming one of the most suitable</text>
+<text class='content'> countries to work and live following America’s last election and Brexit.</text>
+
+  <view class='attr'>
+    <image src='http://www.51yuban.net/img/9_1.jpg'></image>
+    <view class='discript'>
+     <text class='content'> Two thirds of the expats currently working in China report that they are satisfied with their job arrangements. Here at CulturedX We can help you with internship opportunities and job placements in various industries. </text>
+    </view>
+  </view>
+
+
+<!-- 5 -->
+
+   <text class='title'> LP Resposibities and Commitments </text>
+
+  <text class='content'>  As an LP, you are expected to spend minimal five hours each week tutoring host family’s children  </text>
+  <text class='content'>  English or your first language, be it listening, speaking, reading or writing.</text>
+  <text class='content'>   Most of our host family’s children are in early stages of their childhood. So having fun comes first of course! </text>
+
+  <image src='http://www.51yuban.net/img/10_1.jpg'></image>
+
+ 
+  <text class='content'>  Unlike other Au Pair services, our main goal is to create culture sharing opportunities, </text>
+  <text class='content'> not hiring a nanny for the host family, so you are not expected to house work </text>
+    <text class='content'> duties (apart from clean up after yourself), picking up kids from school and other nanny duties etc. </text>
+
+
+
+<!-- 6 -->
+ <text class='title'> Who can apply?</text>
+ <text class='content'>  If you are a young adult who meets our following requirements, we want you! </text>
+  <view class='attr'>
+    <view class='discript2'>
+     <text class='content'> 1.	Language fluency (English or your first language) </text>
+      <text class='content'> 2.	Like children, responsible and open-hearted </text>
+       <text class='content'> 3.	Respect Chinese rules (legislative and cultural); love Chinese culture, follow a healthy lifestyle (no addiction behaviour)  </text>
+        <text class='content'> 4.	Clean and tidy living habits.  </text>
+         <text class='content'> 5.	No contagious illness.  </text>
+    </view>
+    <image src='http://www.51yuban.net/img/13_1.jpg'></image>
+  </view>
+
+
+
+<!-- 7 -->
+  <text class='title'> Safety and security</text>
+
+  <text class='content'>  From the first moment of contacting us to the final moment of saying goodbye after a happy   </text>
+  <text class='content'>  and successful stay, you are protected by our safety and security measures at CulturedX. </text>
+  <text class='content'>   We also offer to help with preparation for the placement, including but not limited to insurances and </text>
+  <text class='content'>  practical tips to ensure your safety and satisfaction for this real adventure. </text>
+
+  <image src='http://www.51yuban.net/img/15_1.jpg'></image>
+
+ 
+  <text class='content'> To apply our fast-track autumn openings in SHANGHAI, simply send us an email </text>
+  <text class='content'>  give us a bit of introduction of yourself with the following details: Name, Age, Mobile Number,  </text>
+    <text class='content'> Nationality, English Fluency and Estimated Arrive Date. </text>
+
+
+
+<!--八  -->
+
+  <text class='title'> Still have questions?</text>
+  <text class='content'>  Contact our friendly staff to answer your questions:  </text>
+  <text class='content1'>  Email: huosq@huiwaizhi.com </text>
+  <text class='content1'>   Facebook: @CulturedX </text>
+  <image src='http://www.51yuban.net/img/14_1.jpg'></image>
+
+ 
+  
+  <!--FORM 表单提交  -->
+
+  <view class='submit-container'>
+    <view class='sub'>
+        <text>Create your account</text>
+        <text >This is step1</text>
+        <text style="font-size:16px;">Name:</text>
+        <input placeholder='Name...' bindinput='nameChange'></input>
+        <text style="font-size:16px;">Age:</text>
+        <input placeholder='Age...' bindinput='ageChange'></input>
+        <text style="font-size:16px;">Nationality:</text>
+        <input placeholder='Nationality...' bindinput='nationChange'></input>
+        <view class='next' bindtap='next'>Next</view>
+    </view>
+    
+  </view>
+ 
+ 
+<block wx:if="{{next}}">
+    <view class='submit-container'>
+    <view class='sub'>
+        <text>Create your account</text>
+        <text >This is step2</text>
+        <text style="font-size:16px;">Mobile Number:</text>
+        <input placeholder='Mobile Number:...' bindinput='telChange'></input>
+        <text style="font-size:16px;">English Fluency:</text>
+        <input placeholder='English Fluency...' bindinput='fluencyChange'></input>
+        <text style="font-size:16px;">Estimated Arrive Date:</text>
+        <input placeholder='Estimated Arrive Date...' bindinput='dateChange'></input>
+
+        <view class='btns'>
+          <view class='next' >Previous</view>
+          <view class='submit' bindtap='submit'>submit</view>
+        </view>
+    
+    </view>
+    
+  </view>
+</block>
+
+    
+  
+
+
+</view>

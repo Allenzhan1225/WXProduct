@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/adress/adress"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "无忧语伴",
+    "navigationBarTextStyle": "black"
+  },
+
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#CCC",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/WechatIMG93.png",
+        "selectedIconPath": "images/WechatIMG91.png"
+      },
+      {
+        "pagePath": "pages/adress/adress",
+        "text": "地址",
+        "iconPath": "images/WechatIMG92.png",
+        "selectedIconPath": "images/WechatIMG94.png"
+      }
+    ]
+  },
+"networkTimeout": {
+  "request": 10000,
+  "downloadFile": 10000
+},
+"debug": true
+ 
+}

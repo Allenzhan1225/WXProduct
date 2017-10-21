@@ -11,7 +11,12 @@
     "pages/my/myConsult/myConsult",
     "pages/index/consult/consult",
     "pages/index/hotQuestion/hotQuestion",
-    "pages/index/nearbyHospital/nearbyHospital"
+    "pages/index/nearbyHospital/nearbyHospital",
+    "pages/my/oppointment/oppointStatus/oppointStatus",
+    "pages/index/hotQuestion/detail/detail",
+    "pages/index/nearbyHospital/detail/detail",
+    "pages/my/oppointment/oppointStatus/detail/detail",
+    "pages/index/hotQuestion/detail/reply/reply"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,15 +27,21 @@
   "tabBar": {
     "backgroundColor": "#fff",
     "color": "#CCC",
-    "selectedColor": "#000",
+    "selectedColor": "#8fc320",
+  
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath":"images/001@2x.png",
+        "selectedIconPath":"images/01@2x.png"
       },
       {
         "pagePath": "pages/my/my",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "images/002@2x.png",
+        "selectedIconPath": "images/02@2x.png"
+      
       }
     ]
   },

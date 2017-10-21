@@ -1,0 +1,16 @@
+
+<view class="container1">
+    
+  <view class="item">
+      <view class="content">
+        <view class="header">
+          <view class="name">{{dataSource.hosptal}}</view>
+          <view class="tel">电话:{{dataSource.h_tel}}</view>
+        </view>  
+        <view class="discript">{{dataSource.h_about}}</view>
+        <view class="time">预约时间:{{dataSource.y_time}}</view>
+      </view>
+     
+  </view>
+ 
+</view>

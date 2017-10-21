@@ -1,0 +1,27 @@
+/* reply.wxss */
+
+.reply{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* background: red; */
+}
+
+.text{
+  margin-top: 40rpx;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.btn{
+  width: 80%;
+  background: rgb(30, 121, 184);
+  height: 88rpx;
+  border-radius: 16rpx;
+  line-height: 88rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 40rpx;
+
+}

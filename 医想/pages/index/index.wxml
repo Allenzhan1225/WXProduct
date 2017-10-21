@@ -17,15 +17,25 @@
    <swiper class="banner"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" duration="{{duration}}" interval="{{interval2}}">
     <block wx:for="{{imgUrls}}" wx:key="swiper">
       <swiper-item style="{height:100%;width:100%}">
-        <image  src="{{item}}"></image>
+        <image  src="{{apiHost}}/Public/upload/banner/{{item.b_url}}"></image>
       </swiper-item>
     </block>
   </swiper> 
 
-  <view class="">
+  <!-- <view class="">
     <block wx:for="{{listTitle}}" wx:key="list">
         <view class="list_item" catchtap="bindtap" data-index="{{index}}" >{{item}}</view>
     </block>
+  </view> -->
+
+  <view class="container-btns">
+      <view class="btns-ask" catchtap="bindtap" data-index="0">快速提问</view>
+      <view class="btns-answervideo">
+            <view class="btns-answer" catchtap="bindtap" data-index="1">热门问答</view>
+            <view class="btns-style"></view>
+            <view class="btns-video" catchtap="bindtap" data-index="2">热点视频</view>
+      </view>
+      <view class="btns-hospital" catchtap="bindtap" data-index="3">附近医院</view>
   </view>
 
 

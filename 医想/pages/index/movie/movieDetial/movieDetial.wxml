@@ -1,5 +1,15 @@
-<view class="container">
+<import src="../../../../wxParse/wxParse.wxml"/>
+<!-- <view class="container"> -->
+<!--  -->
+<!-- http://yxtest.xgyuanda.com/Public/upload/re_shipin/{{url}} -->
 
-    <video src="{{url}}"  autoplay="{{autoplay}}"  controls style="width:{{width}}px;height:{{height}}px;" ></video>
+<!-- http://192.168.1.40:8888/snsdyvideodownload.mp4 -->
+<!--http://yixiang.allenzhan.top/74e50804fa9f7c905553bf08707e4eb6.mp4  -->
+<!-- http://yixiang.allenzhan.top/74e50804fa9f7c905553bf08707e4eb6.mov -->
+<!-- http://yixiang.allenzhan.top/snsdyvideodownload.mp4 -->
+    <!-- <video src="{{apiHost}}/Public/upload/re_shipin/{{url}}"  autoplay="{{autoplay}}"  controls  class="video" ></video> -->
 
-</view>
+<!-- </view> -->
+ <view class="wxParse" style="{width:100%,height:500px,background:red}">
+    <template is="wxParse" data="{{wxParseData:voideHTML.nodes}}"/>
+</view> 

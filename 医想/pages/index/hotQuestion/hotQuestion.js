@@ -1,4 +1,5 @@
 // hotQuestion.js
+var app = getApp();
 Page({
 
   /**
@@ -6,14 +7,37 @@ Page({
    */
   data: {
     tempFilePath:'',
+    dataSource:[],
+    apiHost:app.func.apiHost
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+      this.loadData();
   },
+  // 获取数据
+  loadData(){
+    const that = this; 
+    app.func.reqGet('Api/index/rm_wenda', function (res) {
+      console.log(res)
+      that.setData({
+        dataSource:res,
+      })
+    });  
+  },
+
+
+
+  // 查看详情
+  handleClick(e){
+      const id = e.currentTarget.dataset.id;
+      wx.navigateTo({
+        url: './detail/detail?id='+id,
+      })
+  },
+  
   luyin(){
     var that = this;
     wx.startRecord({

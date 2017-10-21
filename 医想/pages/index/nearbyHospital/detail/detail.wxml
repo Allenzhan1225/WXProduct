@@ -1,0 +1,79 @@
+<!--detail.wxml-->
+<view class="home_page">
+
+   <swiper class="banner"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" duration="{{duration}}" interval="{{interval2}}">
+    <block wx:for="{{imgUrls}}" wx:key="swiper">
+      <swiper-item style="{height:100%;width:100%}">
+        <image  src="{{apiHost}}/Public/upload/fzml/{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper> 
+
+  <view class="content">
+    <view class="title">{{dataSource.tpa[0].hosptal}}</view>
+    <view class="discript">{{dataSource.tpa[0].h_about}}</view>
+    <view class="address">{{dataSource.tpa[0].address}}</view>
+  </view>
+  <view class="doc">名医专家</view>
+  <block wx:for="{{dataSource.tpb}}" wx:key="doc">
+    <view class="doc_section">
+       <view class='doc_disc'>
+        <image src="{{apiHost}}/Public/upload/fzml/{{item.d_images}}"></image>
+        <view class="doc_content">
+          <view class="title">
+            <view class="name">{{item.d_doctor}}</view>
+            <view class="type">{{item.d_zhichen}}</view>
+          </view>
+           <view class="jianjie">简介:{{item.d_about}}</view>
+        </view> 
+      </view>
+      <view style='display:flex;flex-direction: row;'>
+      <view style='display:flex;flex:1'></view>
+           <view class='contactBtn'>进入咨询  
+         <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:0px;'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:20px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:40px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:60px'
+          >
+         </contact-button >
+          <contact-button 
+            type="default-dark" 
+            size="20"
+            session-from="weapp"
+            class='contact'
+            style='left:8px;top:0px'
+          >
+          </contact-button >
+      </view>
+    </view>
+  
+      </view>
+     
+  </block>
+</view>

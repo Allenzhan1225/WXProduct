@@ -1,0 +1,136 @@
+/* detail.wxss */
+/**index.wxss**/
+.home_page{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
+
+
+/*轮播图  */
+.banner{
+  height: 150px;
+  width: 100%;
+}
+.banner image{
+  width: 100%;
+  height: 150px;
+}
+
+.list_item {
+  height: 44px;
+  widows: 100%;
+  line-height: 44px;
+  font-size: 13px;
+  padding: 0 8px;
+  margin-top: 10px;
+  margin: 8px 8px;
+  border-radius: 80px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  box-shadow: 2px 3px 3px #ccc;
+  text-align: center;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.content .title{
+  font-size: 14px;
+  height: 21px;
+  line-height: 21px;
+}
+.content .discript{
+  font-size: 13px;
+  line-height: 21px;
+  color: rgb(156, 156, 156);
+  margin-top: 8px;
+}
+.content .address{
+  font-size: 12px;
+  line-height: 21px;
+  color: rgb(156, 156, 156);
+  margin: 8px 0;
+}
+.doc{
+  text-indent: 8px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: rgb(0, 118, 183);
+  border-bottom: 1px solid #ccc;
+}
+.doc_section{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ccc;
+}
+.doc_disc{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+.doc_disc image{
+  margin: 8px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.doc_disc .doc_content{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+
+.doc_disc .doc_content .title  {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+
+}
+
+.doc_disc .doc_content .title .name{
+  font-size: 14px;
+  color: rgb(45, 45, 45);
+  width: 60px;
+
+}
+.doc_disc .doc_content .title .type{
+  font-size: 12px;
+  color: rgb(155, 155, 155);
+  margin-left: 8px;
+
+}
+.doc_disc .doc_content .jianjie{
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  color: rgb(155, 155, 155);
+  margin-bottom: 8px;
+}
+/*咨询样式*/
+.contactBtn{
+  position: relative;
+  width: 150rpx;
+  height: 54rpx;
+  font-size: 14px;
+  line-height: 54rpx;
+  color: lightseagreen;
+  text-align: right;
+  text-indent: 20rpx;
+  margin-right: 10px;
+
+}
+.contact{
+   opacity: 0; 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}

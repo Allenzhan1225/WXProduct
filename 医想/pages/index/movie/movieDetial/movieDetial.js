@@ -27,19 +27,22 @@ Page({
         width: util.windowinfo().screenHeight,
       })
      
-  //     var voideHTML = `<video width=${this.data.width} height=${this.data.height} controls autoplay>
-  // <source src= "${this.data.apiHost}/Public/upload/re_shipin/${this.data.url}" type= "video/ogg" >
-  // <object data="${this.data.apiHost}/Public/upload/re_shipin/${this.data.url}" width= ${this.data.width}  height= ${this.data.height} >
-  // <embed width=${this.data.width}  height= ${this.data.height} src= "${this.data.apiHost}/Public/upload/re_shipin/${this.data.url}" >
+ 
+      var videoStr = this.data.apiHost+'/Public/upload/re_shipin/'+this.data.url;
+  //     var voideHTML = `<video width=${util.windowinfo().screenHeight} height="240" controls autoplay>
+  // <source src= "${videoStr}" type= "video/ogg" >
+  // <source src="${videoStr}" type="video/mp4">
+  // <source src="${videoStr}" type="video/webm">
+  // <object data="${videoStr}" width= ${util.windowinfo().screenHeight}  height= "240" >
+  // <embed width=${util.windowinfo().screenHeight}  height= "240" src= "${videoStr}" />
   // </object>
   // </video>`;
-      var videoStr = this.data.apiHost+'/Public/upload/re_shipin/'+this.data.url;
       // console.error(videoStr);
   // http://yxtest.xgyuanda.com/Public/upload/re_shipin/trailer.mp4
-      var voideHTML1 = `<video src=${videoStr} width="320" height="240" controls="controls">
+//       var voideHTML1 = `<video src=${videoStr} width="320" height="240" controls="controls">
 
-</video>`;
-      WxParse.wxParse('voideHTML', 'html', voideHTML1, that, 5); 
+// </video>`;
+      // WxParse.wxParse('voideHTML', 'html', voideHTML1, that, 5); 
 
   },
 

@@ -16,6 +16,12 @@ Page({
    */
   onLoad: function (options) {
       this.loadData();
+      const hasHosptal =  options.hasHosptal;
+      if(hasHosptal === 'false'){
+        this.setData({
+          hasHosptal:false,
+        })
+      }
   },
   // 获取数据
   loadData(){

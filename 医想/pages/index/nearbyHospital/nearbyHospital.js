@@ -32,9 +32,11 @@ Page({
         that.setData({
           isHasHospital:false,
         })
+   
+
       }
       that.setData({
-        dataSource:res.hosptal,
+        dataSource:res.hosptal || res,
       })
       
 

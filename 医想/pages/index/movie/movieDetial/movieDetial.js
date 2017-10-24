@@ -85,7 +85,7 @@ Page({
     if (networkType != 'wifi') {
       wx.showModal({
         title: '提示',
-        content: '当前是非wifi环境，确定要用流量观看视频吗？',
+        content: '当前是非wifi环境，请注意流量的使用情况呦？',
         success: function (res) {
           if (res.confirm) {
             that.setData({

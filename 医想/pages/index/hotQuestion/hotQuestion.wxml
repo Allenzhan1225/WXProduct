@@ -2,6 +2,9 @@
 
 <!--oppointment.wxml-->
 <view class="container">
+  <block wx:if="{{hasHosptal == false}}">
+    <text style='color: orange;font-size:13px;'>当前城市没有医院,下面为您列出热门问答列表</text>
+  </block>
   <block wx:for="{{dataSource}}" wx:key="question">
     <view class="item" bindtap="handleClick" data-id="{{item.id}}">
         <view class="header">

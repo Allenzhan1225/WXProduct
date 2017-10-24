@@ -259,10 +259,29 @@ Page({
         }) 
         break;
       case '3':
-        //附近医院
-        wx.navigateTo({
-          url: './nearbyHospital/nearbyHospital',
-        }) 
+
+        const that = this;
+        app.func.reqGet('Api/index/hospital_yx?j_address=' + this.data.city, function (res) {
+          console.log(res);
+          if (res.status == 0) {
+            that.setData({
+              isHasHospital: false,
+            })
+         
+            wx.navigateTo({
+              url: './hotQuestion/hotQuestion?hasHosptal='+"false",
+            }) 
+          }else{
+            //附近医院
+            wx.navigateTo({
+              url: './nearbyHospital/nearbyHospital',
+            }) 
+          }
+
+        })
+
+
+       
         break;
       default:
         break;

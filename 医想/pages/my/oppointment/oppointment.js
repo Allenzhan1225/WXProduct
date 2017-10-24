@@ -36,11 +36,30 @@ Page({
     const that = this;
     app.func.reqGet('Api/index/hospital_yx?j_address=' + city, function (res) {
       console.log(res);
+
+    if(!!res && res.status === '0'){
+      wx.showModal({
+        title: '提示',
+        content: '当前城市没有医院',
+        success: function (res) {
+          if (res.confirm) {
+            wx.navigateBack({
+              
+            })
+          }else{
+            wx.navigateBack({
+
+            })
+          } 
+        }
+      })
+    }
+
       var hospitalArr = [];
-      for (var i = 0; i < res.hosptal.length; ++i){
+      for (var i = 0; i < res.length ; ++i){
         var obj = {};
-        obj.id = res.hosptal[i].id;
-        obj.hosptal = res.hosptal[i].hosptal;
+        obj.id =  res[i].hosptal;
+        obj.hosptal = res[i].hosptal;
         hospitalArr.push(obj);
       } 
       that.setData({

@@ -3,7 +3,7 @@
     <view class="item">
         <view class="header">
           <image src="{{dataSource.abja.u_image}}"></image>
-          <view class="name">{{dataSource.abja.weixin_name}}</view>
+          <view class="name">{{ isSelf? dataSource.abja.weixin_name: dataSource.abja.type == '0'? dataSource.abja.weixin_name:'匿名用户'}}</view>
           <view class="time">{{dataSource.abja.z_time}}</view>       
         </view>
         <view class="content">
@@ -18,7 +18,7 @@
           <view class="name">{{dataSource.abjb[0].d_doctor}}</view>
           <view class="time">{{dataSource.abjb[0].d_time}}</view>   
           <view class="inset"></view>
-          <view class="huifu" catchtap="reply" data-id="{{dataSource.abja.id}}">回复</view>    
+          <view class="huifu" catchtap="reply" data-id="{{dataSource.abja.id}}">{{isSelf?'回复':''}}</view>    
         </view>
           <view class="content" wx:if="{{dataSource.abjb[0].doc_statu == 0}}">
               {{dataSource.abjb[0].d_content}}
@@ -37,7 +37,7 @@
               <view class="name">{{item.z_time != ''? item.weixin_name:item.d_doctor}}</view>
               <view class="time">{{item.z_time != ''? item.z_time:item.d_time}}</view> 
               <view class="inset"></view>
-              <view class="huifu" catchtap="reply" data-id="{{dataSource.abja.id}}">{{item.z_time != ''? "":"回复"}}</view>         
+              <view class="huifu" catchtap="reply" data-id="{{dataSource.abja.id}}">{{  !isSelf? "":"回复"}}</view>         
             </view>
             <view class="content" wx:if="{{item.doc_statu == 0}}">
               {{item.z_time != ''? item.content:item.d_content}}

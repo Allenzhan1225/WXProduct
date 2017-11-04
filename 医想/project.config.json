@@ -8,8 +8,8 @@
 	},
 	"compileType": "weapp",
 	"libVersion": "1.5.4",
-	"appid": "wx39bf2dd4c04a8352",
-	"projectname": "%E5%8C%BB%E6%83%B3App",
+	"appid": "wx453c6ed0910f00ab",
+	"projectname": "%E5%8C%BB%E6%83%B3%E5%B0%8F%E7%A8%8B%E5%BA%8F",
 	"condition": {
 		"weapp": {
 			"current": -1,

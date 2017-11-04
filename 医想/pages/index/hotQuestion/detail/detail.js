@@ -7,7 +7,9 @@ Page({
    */
   data: {
     dataSource:{},
-    apiHost:app.func.apiHost
+    apiHost:app.func.apiHost,
+    isSelf:true,
+    selftype:'',
  
   },
 
@@ -29,10 +31,19 @@ Page({
     if (options.id) {
       //热门问题详情
       const id = options.id;
+      const selftype = options.type;
+      // console.info(options);
+      this.setData({
+        isSelf:false,
+        selftype:selftype,
+      })
       this.loadData(id);
     } else {
       //我的问题详情 
       const id = JSON.parse(options.temp).id;
+      this.setData({
+        isSelf: true,
+      })
       this.loadData1(id)
     } 
   },

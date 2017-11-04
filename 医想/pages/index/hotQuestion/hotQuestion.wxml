@@ -6,10 +6,10 @@
     <text style='color: orange;font-size:13px;'>当前城市没有医院,下面为您列出热门问答列表</text>
   </block>
   <block wx:for="{{dataSource}}" wx:key="question">
-    <view class="item" bindtap="handleClick" data-id="{{item.id}}">
+    <view class="item" bindtap="handleClick" data-id="{{item.id}}" data-type="{{item.type}}">
         <view class="header">
           <image src="{{item.u_image}}"></image>
-          <view class="name">{{item.weixin_name}}</view>
+          <view class="name">{{item.type === '0'? item.weixin_name :'匿名用户'}}</view>
           <view class="time">{{item.z_time}}</view>       
         </view>
         <view class="content">

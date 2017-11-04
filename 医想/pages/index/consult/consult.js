@@ -76,20 +76,25 @@ Page({
   },
 
   // 提交问答
-  submit(){
+  submit(e){
     var that = this;
     //1.获取当前选中的标签
     this.selectedItems();
     console.log(this.data.selectedItems);
     const content = this.data.content;
     console.log(content);
-
+    console.log(e);
+    let typestr = '0';
+    if (e &&e.currentTarget.dataset.type){
+      typestr = e.currentTarget.dataset.type;
+    }
     
+
     const id = wx.getStorageSync('user_id');
     console.log('用户id');
     console.log(id);
     const selectedStr = this.data.selectedItems.join(',');
-    app.func.reqGet('Api/index/ks_wenda?uid='+id+'&sid='+selectedStr+'&content='+content,function(res){
+    app.func.reqGet('Api/index/ks_wenda?uid='+id+'&sid='+selectedStr+'&content='+content+'&type='+typestr,function(res){
       console.log(res);
       if(res.status != 200){
         wx.showToast({

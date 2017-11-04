@@ -8,7 +8,8 @@
 <!-- http://yixiang.allenzhan.top/74e50804fa9f7c905553bf08707e4eb6.mov -->
 <!-- http://yixiang.allenzhan.top/snsdyvideodownload.mp4 -->
 <!--http://1255129678.vod2.myqcloud.com/c0d9ec8dvodgzp1255129678/126c4de99031868223408247944/AG15TovpDagA.mp4  -->
-     <video src="http://yxtest.xgyuanda.com/Public/upload/re_shipin/{{url}}"  autoplay="{{autoplay}}"  controls  class="video" ></video> 
+<!--"http://yxtest.xgyuanda.com/Public/upload/re_shipin/{{url}}"  -->
+     <video src= "{{url}}" autoplay="{{autoplay}}"  controls  class="video" ></video> 
 
  </view> 
  <!-- <view class="wxParse" style="{width:100%,height:500px,background:red}">

@@ -16,8 +16,12 @@
         <textarea bindinput="bindTextChange"  bindinput="textBlur" maxlength="-1" class="textArea" placeholder-class="placeCss" placeholder="请输入您的具体症状" auto-height/>
     </view>
   </view>
-
-  <view class="submit" bindtap="submit">提交</view>
+   <!-- <radio value="{{item.name}}" checked="{{item.checked}}"/>匿名提交 -->
+  <view class='btnView'>
+    <view class="submit" bindtap="submit">提交</view>
+    <view class="submit niming" bindtap="submit" data-type='1'>匿名提交
+  </view>
+ </view>
 
 
 </view>
